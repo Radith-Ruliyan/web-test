@@ -17,11 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const classMembers = [
     {
       id: "01",
-      name: "NAME PLACEHOLDER",
-      nickname: "NICKNAME",
+      name: "Azhar",
+      nickname: "Azhar",
       role: "Student",
-      quote: "Replace this with their own memorable sentence or words.",
-      funFact: "Fun fact: Replace with their iconic habit."
+      quote: "Menjalani setiap momen di 1KA19 dengan penuh tawa dan cerita.",
+      funFact: "Fun fact: Sosok ikonik yang selalu membawa suasana seru di kelas.",
+      image: "assets/Photo/CLASS%20ROASTER%20AZHAR.jpeg"
     },
     {
       id: "02",
@@ -76,7 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Hari pertama menginjakkan kaki di gedung kampus Gunadarma Karawaci. Masih mencari ruangan, masih canggung saling sapa, dan belum tahu siapa yang akan jadi teman tertawa sepanjang semester.",
       location: "Kampus Gunadarma Karawaci",
       tag: "FIRST DAY",
-      aspect: "aspect-landscape"
+      aspect: "aspect-landscape",
+      image: "assets/Photo/FIRST%20DAY.jpeg"
     },
     {
       date: "OKT 2026",
@@ -123,11 +125,12 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "m1",
       category: "class",
-      title: "Ruang Kelas Sebelum Dosen Masuk",
-      desc: "Suasana pagi yang tenang, beberapa orang masih ngantuk dan yang lain saling pinjam catatan.",
+      title: "First Day in Class — 1KA19",
+      desc: "Momen hari-hari awal di ruang kuliah Gunadarma Karawaci. Masih adaptasi, duduk berdekatan, dan memulai lembaran baru bersama.",
       aspect: "aspect-landscape",
       span2: false,
-      tag: "IN CLASS"
+      tag: "FIRST DAY",
+      image: "assets/Photo/FIRST%20DAY.jpeg"
     },
     {
       id: "m2",
@@ -149,12 +152,13 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: "m4",
-      category: "chaos",
-      title: "Candid Momen Tertawa Lepas",
-      desc: "Momen spontan ketika lelucon garing tiba-tiba terdengar sangat lucu di jam rawan mengantuk.",
+      category: "class",
+      title: "Potret Utama Kelas 1KA19",
+      desc: "Kebersamaan lengkap di pelataran kampus Gunadarma Karawaci. Satu kelas, satu awal, ribuan kenangan.",
       aspect: "aspect-cinematic",
       span2: true,
-      tag: "CANDID"
+      tag: "OUR CLASS PHOTO",
+      image: "assets/Photo/FOTO%20UTAMA%20KELAS.jpeg"
     },
     {
       id: "m5",
@@ -182,9 +186,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const peopleData = [
     {
       id: "p1",
-      name: "NAME PLACEHOLDER 01",
-      sentence: "“Replace this with their memorable phrase or memory of 1KA19.”",
-      aspect: "aspect-portrait"
+      name: "Azhar",
+      sentence: "“1KA19 bukan sekadar kelas, tapi cerita terbaik di awal perjalanan kuliah.”",
+      aspect: "aspect-portrait",
+      image: "assets/Photo/CLASS%20ROASTER%20AZHAR.jpeg"
     },
     {
       id: "p2",
@@ -279,25 +284,29 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Render Class Roster Grid
   const rosterContainer = document.getElementById('class-roster-container');
   if (rosterContainer) {
-    rosterContainer.innerHTML = classMembers.map(m => `
-      <div class="roster-card">
+    rosterContainer.innerHTML = classMembers.map((m, idx) => `
+      <div class="roster-card ${m.image ? 'has-photo' : ''}" data-roster-index="${idx}">
         <span class="roster-number">${m.id}</span>
-        <div class="roster-thumb-wrap">
-          <div class="memory-placeholder aspect-portrait" data-label="MEMBER ${m.id}">
-            <div class="placeholder-overlay"></div>
+        <div class="roster-thumb-wrap" ${m.image ? 'style="cursor: pointer;" title="Klik untuk memperbesar foto"' : ''}>
+          <div class="memory-placeholder aspect-portrait" data-label="${m.nickname || m.name}">
+            ${m.image ? `
+              <img src="${m.image}" alt="${m.name}" loading="lazy">
+            ` : `
+              <div class="placeholder-overlay"></div>
+              <div class="placeholder-content">
+                <div class="placeholder-icon-ring" style="width: 42px; height: 42px; margin-bottom: 0.4rem;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <span class="placeholder-badge" style="font-size: 0.65rem;">PHOTO ${m.id}</span>
+                <span class="placeholder-meta" style="font-size: 0.58rem;">1KA19 ARCHIVE</span>
+              </div>
+            `}
             <div class="placeholder-corners">
               <span class="corner tl"></span><span class="corner tr"></span>
               <span class="corner bl"></span><span class="corner br"></span>
-            </div>
-            <div class="placeholder-content">
-              <div class="placeholder-icon-ring" style="width: 42px; height: 42px; margin-bottom: 0.4rem;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <span class="placeholder-badge" style="font-size: 0.65rem;">PHOTO ${m.id}</span>
-              <span class="placeholder-meta" style="font-size: 0.58rem;">1KA19 ARCHIVE</span>
             </div>
           </div>
         </div>
@@ -307,34 +316,53 @@ document.addEventListener('DOMContentLoaded', () => {
         <span class="roster-fact">${m.funFact}</span>
       </div>
     `).join('');
+
+    // Attach click to open lightbox if member has photo
+    rosterContainer.querySelectorAll('.roster-card.has-photo').forEach(card => {
+      card.querySelector('.roster-thumb-wrap')?.addEventListener('click', () => {
+        const m = classMembers[card.dataset.rosterIndex];
+        if (m && m.image) {
+          openLightbox({
+            title: `${m.name} (${m.nickname})`,
+            desc: `${m.quote} — ${m.funFact}`,
+            tag: "CLASS ROSTER",
+            image: m.image
+          });
+        }
+      });
+    });
   }
 
   // 2. Render Timeline
   const timelineContainer = document.getElementById('timeline-container');
   if (timelineContainer) {
     timelineContainer.innerHTML = timelineData.map((t, idx) => `
-      <div class="timeline-node reveal-fade">
+      <div class="timeline-node reveal-fade" data-timeline-index="${idx}">
         <span class="timeline-date">${t.date} &bull; ${t.kicker}</span>
         <h3 class="timeline-title">${t.title}</h3>
         <p class="timeline-desc">${t.desc}</p>
         
-        <div class="timeline-image-holder">
+        <div class="timeline-image-holder" ${t.image ? 'style="cursor: pointer;" title="Klik untuk melihat foto berlayar penuh"' : ''}>
           <div class="memory-placeholder ${t.aspect}" data-label="${t.tag}">
-            <div class="placeholder-overlay"></div>
+            ${t.image ? `
+              <img src="${t.image}" alt="${t.title}" loading="lazy">
+            ` : `
+              <div class="placeholder-overlay"></div>
+              <div class="placeholder-content">
+                <div class="placeholder-icon-ring" style="width: 44px; height: 44px; margin-bottom: 0.5rem;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                  </svg>
+                </div>
+                <span class="placeholder-badge">${t.tag}</span>
+                <p class="placeholder-hint" style="font-size: 0.75rem;">Memory Slot: ${t.title}</p>
+              </div>
+            `}
             <div class="placeholder-corners">
               <span class="corner tl"></span><span class="corner tr"></span>
               <span class="corner bl"></span><span class="corner br"></span>
-            </div>
-            <div class="placeholder-content">
-              <div class="placeholder-icon-ring" style="width: 44px; height: 44px; margin-bottom: 0.5rem;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                  <polyline points="21 15 16 10 5 21"></polyline>
-                </svg>
-              </div>
-              <span class="placeholder-badge">${t.tag}</span>
-              <p class="placeholder-hint" style="font-size: 0.75rem;">Memory Slot: ${t.title}</p>
             </div>
           </div>
         </div>
@@ -357,6 +385,21 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
     `).join('');
+
+    timelineContainer.querySelectorAll('.timeline-node').forEach(node => {
+      const idx = node.dataset.timelineIndex;
+      const t = timelineData[idx];
+      if (t && t.image) {
+        node.querySelector('.timeline-image-holder')?.addEventListener('click', () => {
+          openLightbox({
+            title: t.title,
+            desc: t.desc,
+            tag: t.tag,
+            image: t.image
+          });
+        });
+      }
+    });
   }
 
   // 3. Render Moments Grid (Masonry Scrapbook)
@@ -368,22 +411,26 @@ document.addEventListener('DOMContentLoaded', () => {
       : momentsData.filter(m => m.category === filter);
 
     momentsGrid.innerHTML = filtered.map(m => `
-      <div class="moment-card ${m.span2 ? 'span-2' : ''} reveal-fade" data-moment-id="${m.id}">
+      <div class="moment-card ${m.span2 ? 'span-2' : ''} reveal-fade" data-moment-id="${m.id}" title="Klik untuk mode sinematik">
         <div class="memory-placeholder ${m.aspect}" data-label="${m.tag}">
-          <div class="placeholder-overlay"></div>
+          ${m.image ? `
+            <img src="${m.image}" alt="${m.title}" loading="lazy">
+          ` : `
+            <div class="placeholder-overlay"></div>
+            <div class="placeholder-content">
+              <div class="placeholder-icon-ring" style="width: 48px; height: 48px; margin-bottom: 0.5rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+              </div>
+              <span class="placeholder-badge">${m.tag}</span>
+              <p class="placeholder-hint" style="font-size: 0.78rem;">Klik untuk mode sinematik</p>
+            </div>
+          `}
           <div class="placeholder-corners">
             <span class="corner tl"></span><span class="corner tr"></span>
             <span class="corner bl"></span><span class="corner br"></span>
-          </div>
-          <div class="placeholder-content">
-            <div class="placeholder-icon-ring" style="width: 48px; height: 48px; margin-bottom: 0.5rem;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                <circle cx="12" cy="13" r="4"></circle>
-              </svg>
-            </div>
-            <span class="placeholder-badge">${m.tag}</span>
-            <p class="placeholder-hint" style="font-size: 0.78rem;">Klik untuk mode sinematik</p>
           </div>
         </div>
         <div class="moment-caption-bar">
@@ -413,28 +460,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const peopleGrid = document.getElementById('people-grid');
   if (peopleGrid) {
     peopleGrid.innerHTML = peopleData.map((p, i) => `
-      <div class="people-card reveal-fade">
-        <div class="memory-placeholder ${p.aspect}" data-label="PORTRAIT 0${i + 1}">
-          <div class="placeholder-overlay"></div>
+      <div class="people-card reveal-fade" data-people-index="${i}">
+        <div class="memory-placeholder ${p.aspect}" data-label="PORTRAIT 0${i + 1}" ${p.image ? 'style="cursor: pointer;" title="Klik untuk melihat foto berlayar penuh"' : ''}>
+          ${p.image ? `
+            <img src="${p.image}" alt="${p.name}" loading="lazy">
+          ` : `
+            <div class="placeholder-overlay"></div>
+            <div class="placeholder-content">
+              <div class="placeholder-icon-ring" style="width: 46px; height: 46px; margin-bottom: 0.5rem;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <span class="placeholder-badge">PORTRAIT</span>
+              <span class="placeholder-meta">1KA19 SOUL</span>
+            </div>
+          `}
           <div class="placeholder-corners">
             <span class="corner tl"></span><span class="corner tr"></span>
             <span class="corner bl"></span><span class="corner br"></span>
-          </div>
-          <div class="placeholder-content">
-            <div class="placeholder-icon-ring" style="width: 46px; height: 46px; margin-bottom: 0.5rem;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
-            </div>
-            <span class="placeholder-badge">PORTRAIT</span>
-            <span class="placeholder-meta">1KA19 SOUL</span>
           </div>
         </div>
         <h4 class="people-name">${p.name}</h4>
         <p class="people-sentence">${p.sentence}</p>
       </div>
     `).join('');
+
+    peopleGrid.querySelectorAll('.people-card').forEach(card => {
+      const idx = card.dataset.peopleIndex;
+      const p = peopleData[idx];
+      if (p && p.image) {
+        card.querySelector('.memory-placeholder')?.addEventListener('click', () => {
+          openLightbox({
+            title: p.name,
+            desc: p.sentence,
+            tag: "THE SOULS",
+            image: p.image
+          });
+        });
+      }
+    });
   }
 
   // 5. Render The Chaos (Interactive Voting with LocalStorage)
@@ -602,7 +668,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const step3 = document.getElementById('intro-step-3');
   const step4 = document.getElementById('intro-step-4');
   const btnOpenChapter = document.getElementById('btn-open-chapter');
-  const btnSkipIntro = document.getElementById('btn-skip-intro');
   const btnReplay = document.getElementById('btn-replay-story');
 
   let introTimeout1, introTimeout2, introTimeout3, introTimeout4;
@@ -653,7 +718,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (introEl) {
     introEl.addEventListener('click', (e) => {
-      if (step4 && !step4.classList.contains('active') && !e.target.closest('#btn-open-chapter') && !e.target.closest('#btn-skip-intro')) {
+      if (step4 && !step4.classList.contains('active') && !e.target.closest('#btn-open-chapter')) {
         clearTimeout(introTimeout1);
         clearTimeout(introTimeout2);
         clearTimeout(introTimeout3);
@@ -665,14 +730,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnOpenChapter) {
     btnOpenChapter.addEventListener('click', () => {
-      closeCinematicIntro();
-      if (!musicController.isExplicitlyDisabled()) {
-        musicController.play();
-      }
-    });
-  }
-  if (btnSkipIntro) {
-    btnSkipIntro.addEventListener('click', () => {
       closeCinematicIntro();
       if (!musicController.isExplicitlyDisabled()) {
         musicController.play();
@@ -749,26 +806,36 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxDesc.textContent = moment.desc;
     lightboxTag.textContent = moment.tag;
 
-    lightboxPlaceholder.innerHTML = `
-      <div class="placeholder-overlay"></div>
-      <div class="placeholder-corners">
-        <span class="corner tl"></span><span class="corner tr"></span>
-        <span class="corner bl"></span><span class="corner br"></span>
-      </div>
-      <div class="placeholder-content">
-        <div class="placeholder-icon-ring" style="width: clamp(42px, 10vw, 58px); height: clamp(42px, 10vw, 58px);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-            <circle cx="12" cy="13" r="4"></circle>
-          </svg>
+    if (moment.image) {
+      lightboxPlaceholder.innerHTML = `
+        <img src="${moment.image}" alt="${moment.title}" loading="eager">
+        <div class="placeholder-corners">
+          <span class="corner tl"></span><span class="corner tr"></span>
+          <span class="corner bl"></span><span class="corner br"></span>
         </div>
-        <span class="placeholder-badge" style="font-size: 0.85rem;">${moment.tag}</span>
-        <p class="placeholder-hint" style="max-width: 400px; margin-top: 0.4rem;">
-          Area foto berlayar penuh siap disematkan untuk momen ini.
-        </p>
-        <span class="placeholder-meta">UNIVERSITAS GUNADARMA KARAWACI</span>
-      </div>
-    `;
+      `;
+    } else {
+      lightboxPlaceholder.innerHTML = `
+        <div class="placeholder-overlay"></div>
+        <div class="placeholder-corners">
+          <span class="corner tl"></span><span class="corner tr"></span>
+          <span class="corner bl"></span><span class="corner br"></span>
+        </div>
+        <div class="placeholder-content">
+          <div class="placeholder-icon-ring" style="width: clamp(42px, 10vw, 58px); height: clamp(42px, 10vw, 58px);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+          </div>
+          <span class="placeholder-badge" style="font-size: 0.85rem;">${moment.tag}</span>
+          <p class="placeholder-hint" style="max-width: 400px; margin-top: 0.4rem;">
+            Area foto berlayar penuh siap disematkan untuk momen ini.
+          </p>
+          <span class="placeholder-meta">UNIVERSITAS GUNADARMA KARAWACI</span>
+        </div>
+      `;
+    }
 
     lightbox.classList.add('active');
     lightbox.setAttribute('aria-hidden', 'false');
@@ -789,6 +856,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const moment = momentsData.find(m => m.id === id);
         if (moment) openLightbox(moment);
       });
+    });
+  }
+
+  // Hero Class Photo Lightbox Trigger
+  const heroPhotoFrame = document.getElementById('hero-class-photo-frame');
+  if (heroPhotoFrame) {
+    heroPhotoFrame.addEventListener('click', () => {
+      openLightbox({
+        title: "1KA19 — The First Chapter",
+        desc: "Potret kebersamaan kelas 1KA19 Sistem Informasi Universitas Gunadarma Karawaci (2026–2027). Satu kelas, satu awal, ribuan kenangan.",
+        tag: "FOTO UTAMA KELAS",
+        image: "assets/Photo/FOTO%20UTAMA%20KELAS.jpeg"
+      });
+    });
+    heroPhotoFrame.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        heroPhotoFrame.click();
+      }
     });
   }
 
