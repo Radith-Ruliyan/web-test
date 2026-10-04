@@ -683,21 +683,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
+  function toggleMobileMenu(open) {
+    if (!mobileMenu || !mobileToggle) return;
+    const shouldOpen = open !== undefined ? open : !mobileMenu.classList.contains('active');
+    mobileToggle.setAttribute('aria-expanded', String(shouldOpen));
+    mobileToggle.classList.toggle('open', shouldOpen);
+    mobileMenu.classList.toggle('active', shouldOpen);
+    document.body.style.overflow = shouldOpen ? 'hidden' : '';
+  }
+
   if (mobileToggle && mobileMenu) {
-    mobileToggle.addEventListener('click', () => {
-      const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
-      mobileToggle.setAttribute('aria-expanded', !isExpanded);
-      mobileToggle.classList.toggle('open');
-      mobileMenu.classList.toggle('active');
-    });
+    mobileToggle.addEventListener('click', () => toggleMobileMenu());
 
     // Close menu when clicking link
     mobileMenu.querySelectorAll('.mobile-link').forEach(link => {
       link.addEventListener('click', () => {
-        mobileToggle.setAttribute('aria-expanded', 'false');
-        mobileToggle.classList.remove('open');
-        mobileMenu.classList.remove('active');
+        toggleMobileMenu(false);
       });
+    });
+
+    // Close when tapping outside the menu container
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        toggleMobileMenu(false);
+      }
     });
   }
 
@@ -725,8 +734,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <span class="corner bl"></span><span class="corner br"></span>
       </div>
       <div class="placeholder-content">
-        <div class="placeholder-icon-ring" style="width: 58px; height: 58px;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <div class="placeholder-icon-ring" style="width: clamp(42px, 10vw, 58px); height: clamp(42px, 10vw, 58px);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
             <circle cx="12" cy="13" r="4"></circle>
           </svg>
