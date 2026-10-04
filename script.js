@@ -807,14 +807,30 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxTag.textContent = moment.tag;
 
     if (moment.image) {
+      lightboxPlaceholder.classList.remove('aspect-landscape');
+      lightboxPlaceholder.classList.add('has-real-photo');
       lightboxPlaceholder.innerHTML = `
-        <img src="${moment.image}" alt="${moment.title}" loading="eager">
-        <div class="placeholder-corners">
-          <span class="corner tl"></span><span class="corner tr"></span>
-          <span class="corner bl"></span><span class="corner br"></span>
-        </div>
+        <img src="${moment.image}" alt="${moment.title}" class="lightbox-real-photo" loading="eager">
       `;
+
+      const img = lightboxPlaceholder.querySelector('img');
+      if (img) {
+        const updateRatio = () => {
+          if (img.naturalHeight > img.naturalWidth) {
+            lightboxPlaceholder.classList.add('is-portrait');
+          } else {
+            lightboxPlaceholder.classList.remove('is-portrait');
+          }
+        };
+        if (img.complete && img.naturalWidth > 0) {
+          updateRatio();
+        } else {
+          img.onload = updateRatio;
+        }
+      }
     } else {
+      lightboxPlaceholder.classList.add('aspect-landscape');
+      lightboxPlaceholder.classList.remove('has-real-photo', 'is-portrait');
       lightboxPlaceholder.innerHTML = `
         <div class="placeholder-overlay"></div>
         <div class="placeholder-corners">
