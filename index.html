@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=20261004.5">
+  <link rel="stylesheet" href="style.css?v=20261004.6">
 </head>
 <body class="intro-active">
 
@@ -287,27 +287,41 @@
     <section id="moments" class="section section-moments">
       <div class="container">
         
+
         <div class="section-head reveal-fade">
-          <span class="section-kicker">SCRAPBOOK ARCHIVE</span>
-          <h2 class="section-title">MOMENTS</h2>
-          <p class="section-subtitle">“Small moments. Big memories.”</p>
+          <span class="section-kicker">SCRAPBOOK PINBOARD</span>
+          <h2 class="section-title">THE MEMORY WALL</h2>
+          <p class="section-subtitle">“Dinding kenangan acak 1KA19 — setiap tawa, cerita, dan momen yang pernah tertempel di sini.”</p>
         </div>
 
-        <!-- Filter / Tabs -->
-        <div class="moments-filter reveal-fade" role="tablist">
-          <button class="filter-btn active" data-filter="all">ALL MEMORIES</button>
-          <button class="filter-btn" data-filter="class">IN CLASS</button>
-          <button class="filter-btn" data-filter="hangout">HANGOUTS</button>
-          <button class="filter-btn" data-filter="chaos">CANDID</button>
+        <!-- Filter / Tabs & Tempel Foto Button -->
+        <div class="moments-controls reveal-fade">
+          <div class="moments-filter" role="tablist">
+            <button class="filter-btn active" data-filter="all">SEMUA FOTO</button>
+            <button class="filter-btn" data-filter="class">DI KELAS</button>
+            <button class="filter-btn" data-filter="hangout">NONGKRONG</button>
+            <button class="filter-btn" data-filter="chaos">CANDID</button>
+          </div>
+
+          <div class="moments-upload-wrap">
+            <input type="file" id="photo-wall-upload" accept="image/*" multiple class="sr-only">
+            <label for="photo-wall-upload" class="btn-add-photos" title="Tempel foto langsung dari HP / Laptop Anda">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+              <span>TEMPEL FOTO (+UPLOAD)</span>
+            </label>
+          </div>
         </div>
 
-        <!-- Masonry / Editorial Scrapbook Grid -->
-        <div class="moments-grid" id="moments-grid">
+        <!-- Scattered Scrapbook Wall Grid -->
+        <div class="photo-wall-board" id="moments-grid">
           <!-- Dynamically populated from script.js momentsData -->
         </div>
 
         <div class="moments-footer-note reveal-fade">
-          <p>Setiap foto nantinya dapat dibuka dalam mode sinematik berlayar penuh.</p>
+          <p>Ketuk atau klik foto mana saja untuk melihat kenangan dalam mode sinematik berlayar penuh.</p>
         </div>
 
       </div>
@@ -624,6 +638,6 @@
   </aside>
 
   <!-- SCRIPT -->
-  <script src="script.js?v=20261004.5"></script>
+  <script src="script.js?v=20261004.6"></script>
 </body>
 </html>

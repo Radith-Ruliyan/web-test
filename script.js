@@ -119,66 +119,108 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   /**
-   * Photo Memory Wall (Moments)
+   * ==========================================================================
+   * DINDING KENANGAN ACAK (THE SCATTERED PHOTO WALL)
+   * --------------------------------------------------------------------------
+   * Anda bisa menambahkan BANYAK FOTO LANGSUNG di bawah ini!
+   * Cukup tambahkan nama file foto di dalam array:
+   *   "assets/Photo/nama_foto.jpg",
+   * Atau dalam bentuk objek lengkap dengan judul & kategori:
+   *   { image: "assets/Photo/nama.jpg", title: "Judul Momen", tag: "DI KELAS", category: "class" },
+   * ==========================================================================
    */
-  const momentsData = [
+  const photoWallGallery = [
     {
-      id: "m1",
+      id: "pw-1",
+      image: "assets/Photo/FOTO%20UTAMA%20KELAS.jpeg",
+      title: "Foto Utama Kelas 1KA19",
+      desc: "Satu kelas, satu awal, ribuan kenangan bersama di kampus Gunadarma Karawaci.",
+      tag: "CLASS PHOTO",
       category: "class",
-      title: "First Day in Class — 1KA19",
-      desc: "Momen hari-hari awal di ruang kuliah Gunadarma Karawaci. Masih adaptasi, duduk berdekatan, dan memulai lembaran baru bersama.",
-      aspect: "aspect-landscape",
-      span2: false,
+      date: "2026",
+      tilt: "tilt-1",
+      tape: "tape-slant"
+    },
+    {
+      id: "pw-2",
+      image: "assets/Photo/FIRST%20DAY.jpeg",
+      title: "First Day in Class",
+      desc: "Momen hari-hari awal di ruang kuliah Gunadarma Karawaci saat pertama kali duduk bersama.",
       tag: "FIRST DAY",
-      image: "assets/Photo/FIRST%20DAY.jpeg"
-    },
-    {
-      id: "m2",
-      category: "hangout",
-      title: "Sore Santai Setelah Kuliah Terakhir",
-      desc: "Menikmati langit sore Karawaci sambil menghabiskan sisa obrolan sebelum pulang ke rumah masing-masing.",
-      aspect: "aspect-portrait",
-      span2: false,
-      tag: "HANGOUTS"
-    },
-    {
-      id: "m3",
       category: "class",
+      date: "23 SEP 2026",
+      tilt: "tilt-2",
+      tape: "tape-left"
+    },
+    {
+      id: "pw-3",
+      image: "assets/Photo/CLASS%20ROASTER%20AZHAR.jpeg",
+      title: "Azhar — 1KA19",
+      desc: "Mahasiswa 1KA19 Sistem Informasi Gunadarma Karawaci.",
+      tag: "ROSTER",
+      category: "class",
+      date: "2026",
+      tilt: "tilt-3",
+      tape: "tape-right"
+    },
+    {
+      id: "pw-4",
+      image: "",
+      title: "Sore Santai Setelah Kuliah",
+      desc: "Menikmati langit sore Karawaci sambil menghabiskan sisa obrolan sebelum pulang ke rumah masing-masing.",
+      tag: "HANGOUTS",
+      category: "hangout",
+      date: "2026",
+      tilt: "tilt-4",
+      tape: "tape-slant"
+    },
+    {
+      id: "pw-5",
+      image: "",
       title: "Papan Tulis & Catatan Bersama",
       desc: "Coretan rumus dan flowchart yang memenuhi papan saat belajar kelompok dadakan.",
-      aspect: "aspect-polaroid",
-      span2: false,
-      tag: "IN CLASS"
-    },
-    {
-      id: "m4",
+      tag: "IN CLASS",
       category: "class",
-      title: "Potret Utama Kelas 1KA19",
-      desc: "Kebersamaan lengkap di pelataran kampus Gunadarma Karawaci. Satu kelas, satu awal, ribuan kenangan.",
-      aspect: "aspect-cinematic",
-      span2: true,
-      tag: "OUR CLASS PHOTO",
-      image: "assets/Photo/FOTO%20UTAMA%20KELAS.jpeg"
+      date: "2026",
+      tilt: "tilt-5",
+      tape: "tape-left"
     },
     {
-      id: "m5",
-      category: "hangout",
+      id: "pw-6",
+      image: "",
       title: "Makan Siang Bareng 1KA19",
       desc: "Meja kantin yang digabung jadi panjang agar semua bisa duduk bareng.",
-      aspect: "aspect-square",
-      span2: false,
-      tag: "HANGOUTS"
+      tag: "HANGOUTS",
+      category: "hangout",
+      date: "2026",
+      tilt: "tilt-6",
+      tape: "tape-right"
     },
     {
-      id: "m6",
-      category: "chaos",
+      id: "pw-7",
+      image: "",
       title: "Ekspresi Selesai Kuis",
       desc: "Campuran rasa pasrah, lega, dan saling tanya 'lu tadi nomor tiga jawab apa?'.",
-      aspect: "aspect-landscape",
-      span2: false,
-      tag: "CANDID"
+      tag: "CANDID",
+      category: "chaos",
+      date: "2026",
+      tilt: "tilt-1",
+      tape: "tape-slant"
+    },
+    {
+      id: "pw-8",
+      image: "",
+      title: "Candid Momen Tertawa Lepas",
+      desc: "Momen spontan ketika lelucon garing tiba-tiba terdengar sangat lucu di jam rawan mengantuk.",
+      tag: "CANDID",
+      category: "chaos",
+      date: "2026",
+      tilt: "tilt-2",
+      tape: "tape-slant"
     }
   ];
+
+  const momentsData = photoWallGallery;
 
   /**
    * The People Memory Cards
@@ -402,46 +444,100 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Render Moments Grid (Masonry Scrapbook)
+  // 3. Render Dinding Kenangan Acak (Scattered Photo Wall)
   const momentsGrid = document.getElementById('moments-grid');
+  const photoWallUpload = document.getElementById('photo-wall-upload');
+
+  function normalizePhotoItem(item, idx) {
+    if (typeof item === 'string') {
+      const fileName = item.split('/').pop().replace(/\.[^/.]+$/, "").replace(/%20|[_-]/g, " ");
+      return {
+        id: `photo-${idx}`,
+        image: item,
+        title: fileName || `Momen 1KA19 #${idx + 1}`,
+        desc: `Foto kenangan 1KA19: ${fileName}`,
+        tag: "MOMENT",
+        category: "class",
+        date: "2026",
+        tilt: `tilt-${(idx % 6) + 1}`,
+        tape: (idx % 3 === 0) ? 'tape-slant' : ((idx % 3 === 1) ? 'tape-left' : 'tape-right')
+      };
+    }
+    return {
+      ...item,
+      tilt: item.tilt || `tilt-${(idx % 6) + 1}`,
+      tape: item.tape || ((idx % 3 === 0) ? 'tape-slant' : ((idx % 3 === 1) ? 'tape-left' : 'tape-right'))
+    };
+  }
+
   function renderMoments(filter = 'all') {
     if (!momentsGrid) return;
+    
+    // Normalize any raw string entries
+    for (let i = 0; i < photoWallGallery.length; i++) {
+      photoWallGallery[i] = normalizePhotoItem(photoWallGallery[i], i);
+    }
+
     const filtered = filter === 'all' 
-      ? momentsData 
-      : momentsData.filter(m => m.category === filter);
+      ? photoWallGallery 
+      : photoWallGallery.filter(m => m.category === filter || (filter === 'class' && m.category === 'all'));
 
-    momentsGrid.innerHTML = filtered.map(m => `
-      <div class="moment-card ${m.span2 ? 'span-2' : ''} reveal-fade" data-moment-id="${m.id}" title="Klik untuk mode sinematik">
-        <div class="memory-placeholder ${m.aspect}" data-label="${m.tag}">
-          ${m.image ? `
-            <img src="${m.image}" alt="${m.title}" loading="lazy">
-          ` : `
-            <div class="placeholder-overlay"></div>
-            <div class="placeholder-content">
-              <div class="placeholder-icon-ring" style="width: 48px; height: 48px; margin-bottom: 0.5rem;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                  <circle cx="12" cy="13" r="4"></circle>
-                </svg>
-              </div>
-              <span class="placeholder-badge">${m.tag}</span>
-              <p class="placeholder-hint" style="font-size: 0.78rem;">Klik untuk mode sinematik</p>
+    momentsGrid.innerHTML = filtered.map(m => {
+      const hasImg = Boolean(m.image);
+      return `
+        <article class="polaroid-pin-card ${m.tilt} reveal-fade" data-moment-id="${m.id}" tabindex="0" role="button" title="Klik untuk melihat foto berlayar penuh">
+          <div class="tape-strip ${m.tape}" aria-hidden="true"></div>
+          <div class="polaroid-inner">
+            <div class="polaroid-media">
+              ${hasImg ? `
+                <img src="${m.image}" alt="${m.title}" loading="lazy">
+              ` : `
+                <div class="placeholder-overlay"></div>
+                <div class="placeholder-content" style="padding: 1.2rem; text-align: center;">
+                  <div class="placeholder-icon-ring" style="width: 38px; height: 38px; margin: 0 auto 0.4rem;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                      <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                  </div>
+                  <span class="placeholder-badge" style="font-size: 0.65rem;">SLOT FOTO</span>
+                </div>
+              `}
             </div>
-          `}
-          <div class="placeholder-corners">
-            <span class="corner tl"></span><span class="corner tr"></span>
-            <span class="corner bl"></span><span class="corner br"></span>
+            <div class="polaroid-caption">
+              <span class="polaroid-title">${m.title}</span>
+              <div class="polaroid-meta">
+                <span>${m.tag || 'MOMENT'}</span>
+                <span class="polaroid-date">${m.date || '2026'}</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="moment-caption-bar">
-          <h4 class="moment-title">${m.title}</h4>
-          <span class="moment-tag">${m.tag}</span>
-        </div>
-      </div>
-    `).join('');
+        </article>
+      `;
+    }).join('');
 
-    // Attach lightbox triggers to newly rendered moments
-    attachMomentLightboxTriggers();
+    // Attach click triggers to open in full Lightbox
+    momentsGrid.querySelectorAll('.polaroid-pin-card').forEach(card => {
+      const id = card.dataset.momentId;
+      const moment = photoWallGallery.find(m => m.id === id);
+      card.addEventListener('click', () => {
+        if (moment && moment.image) {
+          openLightbox(moment);
+        } else if (moment) {
+          openLightbox({
+            ...moment,
+            desc: moment.desc || "Slot foto ini siap ditempel dengan kenangan baru kelas 1KA19."
+          });
+        }
+      });
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
+        }
+      });
+    });
+
     setupRevealObserver();
   }
   renderMoments('all');
@@ -455,6 +551,33 @@ document.addEventListener('DOMContentLoaded', () => {
       renderMoments(btn.dataset.filter);
     });
   });
+
+  // Client-side Photo Upload Handler (+TEMPEL FOTO)
+  if (photoWallUpload) {
+    photoWallUpload.addEventListener('change', (e) => {
+      const files = Array.from(e.target.files);
+      if (!files.length) return;
+
+      files.forEach((file, i) => {
+        const objectUrl = URL.createObjectURL(file);
+        const cleanName = file.name.replace(/\.[^/.]+$/, "").replace(/%20|[_-]/g, " ");
+        photoWallGallery.unshift({
+          id: `custom-upload-${Date.now()}-${i}`,
+          image: objectUrl,
+          title: cleanName || `Foto Tambahan #${i + 1}`,
+          desc: "Foto kenangan yang baru saja ditempelkan ke dinding kenangan 1KA19.",
+          tag: "TEMPELAN BARU",
+          category: "class",
+          date: "2026",
+          tilt: `tilt-${((i + 1) % 6) + 1}`,
+          tape: (i % 2 === 0) ? 'tape-slant' : 'tape-left'
+        });
+      });
+
+      renderMoments('all');
+      filterBtns.forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
+    });
+  }
 
   // 4. Render People Grid
   const peopleGrid = document.getElementById('people-grid');
