@@ -18,57 +18,129 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "01",
       name: "Azhar",
-      nickname: "Azhar",
-      role: "Student",
+      nickname: "BOSS Azhar",
+      role: "Ketua Kelas",
       quote: "Menjalani setiap momen di 1KA19 dengan penuh tawa dan cerita.",
-      funFact: "Fun fact: Sosok ikonik yang selalu membawa suasana seru di kelas.",
+      funFact: "Fun fact: Sosok ikonik yang selalu membawa suasana seru dan komedi di kelas.",
       image: "assets/Photo/CLASS%20ROASTER%20AZHAR.jpeg"
     },
     {
       id: "02",
-      name: "Ketua Kelas",
-      nickname: "Pak Ketua",
-      role: "Class Leader",
+      name: "AHMAD RIZA",
+      nickname: "RIZA",
+      role: "Wakil Ketua Kelas",
       quote: "Memimpin 1KA19 dengan penuh kebanggaan, tanggung jawab, dan tawa.",
-      funFact: "Fun fact: Garda terdepan info dosen & komando solid kelas.",
-      image: "assets/Photo/KETUA.jpeg"
+      funFact: "Garda terdepan info dosen & komando solid kelas.",
+      image: "assets/Photo/"
     },
     {
       id: "03",
-      name: "Si Ganteng",
-      nickname: "Ganteng 1KA19",
-      role: "Student",
+      name: "Muhammad Yaris",
+      nickname: "Yaris",
+      role: "PJ MATA KULIAH ALGORITMA & PEMROGRAM 1B",
       quote: "Karisma tetap menyala di setiap sudut lorong kampus Karawaci.",
       funFact: "Fun fact: Selalu tampil rapi dan estetik di setiap jepretan kamera.",
-      image: "assets/Photo/SIGANTENG.jpeg"
+      image: "assets/Photo/"
     },
     {
       id: "04",
-      name: "Si Kembar",
-      nickname: "Duo Kembar",
-      role: "Students",
+      name: "HYUGA PUTRA APRIANTO",
+      nickname: "Hyuga",
+      role: "Boss Muda",
       quote: "Dua raga, satu frekuensi kebersamaan tak terpisahkan di 1KA19.",
       funFact: "Fun fact: Selalu kompak jalan bareng dari selasar sampai ruang kelas.",
-      image: "assets/Photo/SI%20KEMBAR.jpeg"
+      image: "assets/Photo/"
     },
     {
       id: "05",
-      name: "Azhar (Eksis Mode)",
-      nickname: "Azhar",
-      role: "Mood Maker",
+      name: "Radith Ruliyan",
+      nickname: "Radith",
+      role: "PJ MATA KULIAH MATEMATIKA 1A",
       quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
       funFact: "Fun fact: Mood maker yang selalu bikin suasana kelas cair dan ceria.",
-      image: "assets/Photo/AZHAREKSIS.jpeg"
+      image: "assets/Photo/"
     },
     {
       id: "06",
-      name: "Srikandi 1KA19",
-      nickname: "Cecan Squad",
-      role: "Students",
+      name: "REHAN CHANDRA WINATA",
+      nickname: "Rehan",
+      role: "PJ MATA KULIAH KS TSI B",
       quote: "Penyemangat dan pemberi warna cerah di setiap hari perkuliahan.",
       funFact: "Fun fact: Sudut kelas paling rapi dengan catatan materi terlengkap.",
       image: "assets/Photo/CECAN.jpeg"
-    }
+    },
+    {
+      id: "07",
+      name: "MUHAMMAD HAFIDZ NASUTION",
+      nickname: "Hafidz",
+      role: "Bendahara Kelas",
+      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
+      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      image: "assets/Photo/"
+    },
+    {
+      id: "08",
+      name: "ARVIN HOBART PASARIBU",
+      nickname: "Arvin",
+      role: "PJ MATA KULIAH BISNIS & EKONOMI D",
+      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
+      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      image: "assets/Photo/"
+    },
+    {
+      id: "09",
+      name: "PASKALIS BAMA YUDANTO",
+      nickname: "Bama",
+      role: "PJ MATA KULIAH ALGORITMA & PEMROGRAMAN 1A",
+      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
+      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      image: "assets/Photo/"
+    },
+    {
+      id: "10",
+      name: "CHAIRO JUAN SHEELO HARIYANTO",
+      nickname: "Chairo",
+      role: "PJ MATA KULIAH DIGITAL CITIZENSHIP",
+      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
+      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      image: "assets/Photo/"
+    },
+    {
+      id: "11",
+      name: "FARDAN RUKMAN QOLBI",
+      nickname: "Fardan",
+      role: "PJ MATA KULIAH MATA KULIAH FISIKA KIMIA A",
+      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
+      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      image: "assets/Photo/"
+    },
+    {
+      id: "12",
+      name: "SATRIA ARYA PRADIPTA",
+      nickname: "Satria",
+      role: "PJ MATA KULIAH MATA KULIAH FISIKA KIMIA B",
+      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
+      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      image: "assets/Photo/"
+    },
+    {
+      id: "13",
+      name: "MUHAMMAD REIZYA KHUZAIMAH",
+      nickname: "Reizya",
+      role: "PJ MATA KULIAH MATA KULIAH ALGORITMA & PEMROGRAMAN 1C",
+      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
+      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      image: "assets/Photo/"
+    },
+     {
+      id: "14",
+      name: "MUHAMMAD REIZYA KHUZAIMAH",
+      nickname: "Reizya",
+      role: "PJ MATA KULIAH MATA KULIAH ALGORITMA & PEMROGRAMAN 1C",
+      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
+      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      image: "assets/Photo/"
+    },
   ];
 
   /**
@@ -92,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Materi algoritma dan sistem informasi pertama kali dibuka. Sesi foto bareng di ruang kelas setelah jam kuliah selesai dengan muka-muka penuh semangat baru.",
       location: "Ruang Kelas 1KA19",
       tag: "FOTBAR KELAS",
-      aspect: "aspect-portrait",
+      aspect: "aspect-landscape",
       image: "assets/Photo/FOTBAR%20KELAS.jpeg"
     },
     {
@@ -102,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Kerja kelompok pertama. Pembagian tugas di grup chat, janji kumpul jam 1 baru lengkap jam 3, dan diakhiri sesi makan bareng hangat yang lebih lama dari ngerjain tugasnya.",
       location: "Kantin & Selasar Kampus",
       tag: "MAKAN BARENG",
-      aspect: "aspect-landscape",
+      aspect: "aspect-tall",
       image: "assets/Photo/MAKAN%20BARENG.jpeg"
     },
     {
@@ -112,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Formasi kompak para mahasiswa 1KA19. Slide presentasi yang diedit hingga menit-menit akhir dan solidaritas barisan yang saling menyemangati di depan kelas.",
       location: "Podium Kelas 1KA19",
       tag: "THE BOYS",
-      aspect: "aspect-landscape",
+      aspect: "aspect-portrait",
       image: "assets/Photo/BARISAN%20LAKI%20LAKI%201KA19.jpeg"
     },
     {
@@ -122,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Saat obrolan bukan lagi seputar tugas kuliah, melainkan jalan-jalan santai melepas penat ke Mall SMS Karawaci sambil menunggu macet mereda.",
       location: "Summarecon Mall Serpong & Karawaci",
       tag: "MALL SMS",
-      aspect: "aspect-polaroid",
+      aspect: "aspect-landscape",
       image: "assets/Photo/MALL%20SMS.jpeg"
     }
   ];
@@ -132,7 +204,8 @@ document.addEventListener('DOMContentLoaded', () => {
    * DINDING KENANGAN ACAK (THE SCATTERED PHOTO WALL)
    * --------------------------------------------------------------------------
    * Semua 20 foto dan video kenangan 1KA19 tertempel rapi di sini
-   * dengan konteks dan kategori sesuai nama file masing-masing!
+   * dengan proporsi kartu khusus (landscape / portrait / tall)
+   * sehingga foto TIDAK AKAN TERPOTONG SAMA SEKALI!
    * ==========================================================================
    */
   const photoWallGallery = [
@@ -143,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Satu kelas, satu awal, ribuan kenangan bersama di kampus Gunadarma Karawaci.",
       tag: "CLASS PHOTO",
       category: "class",
+      cardType: "card-landscape",
       date: "2026",
       tilt: "tilt-1",
       tape: "tape-slant"
@@ -154,6 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Momen hari-hari awal di ruang kuliah Gunadarma Karawaci saat pertama kali duduk bersama.",
       tag: "FIRST DAY",
       category: "class",
+      cardType: "card-landscape",
       date: "23 SEP 2026",
       tilt: "tilt-2",
       tape: "tape-left"
@@ -165,6 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Foto bersama seluruh kawan kelas setelah usai jam mata kuliah di kampus Karawaci.",
       tag: "IN CLASS",
       category: "class",
+      cardType: "card-landscape",
       date: "2026",
       tilt: "tilt-3",
       tape: "tape-right"
@@ -176,6 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Formasi kompak para cowok 1KA19 di depan kelas dengan gaya santai andalan.",
       tag: "THE BOYS",
       category: "class",
+      cardType: "card-portrait",
       date: "2026",
       tilt: "tilt-4",
       tape: "tape-slant"
@@ -187,6 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Potret resmi roster 1KA19: Azhar, mahasiswa Sistem Informasi Karawaci.",
       tag: "ROSTER",
       category: "class",
+      cardType: "card-tall",
       date: "2026",
       tilt: "tilt-5",
       tape: "tape-left"
@@ -198,6 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Pose penuh senyum dan rasa percaya diri Azhar yang selalu menghidupkan suasana kelas.",
       tag: "CANDID",
       category: "chaos",
+      cardType: "card-landscape",
       date: "2026",
       tilt: "tilt-6",
       tape: "tape-right"
@@ -209,6 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Sudut pandang percaya diri sang ketua bersama rekan-rekan seperjuangan 1KA19.",
       tag: "LEADERSHIP",
       category: "class",
+      cardType: "card-portrait",
       date: "2026",
       tilt: "tilt-1",
       tape: "tape-slant"
@@ -220,6 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Pose menawan dan rapi salah satu mahasiswa andalan kelas 1KA19.",
       tag: "THE SOUL",
       category: "class",
+      cardType: "card-landscape",
       date: "2026",
       tilt: "tilt-2",
       tape: "tape-left"
@@ -231,6 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Duo kembar kompak yang selalu satu frekuensi dan bikin kelas makin ramai.",
       tag: "DUO SQUAD",
       category: "class",
+      cardType: "card-portrait",
       date: "2026",
       tilt: "tilt-3",
       tape: "tape-right"
@@ -242,6 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Senyuman manis mahasiswi 1KA19 yang selalu mencerahkan suasana kelas.",
       tag: "THE GIRLS",
       category: "hangout",
+      cardType: "card-landscape",
       date: "2026",
       tilt: "tilt-4",
       tape: "tape-slant"
@@ -253,6 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Momen kebersamaan dan keceriaan srikandi 1KA19 di selasar kampus Karawaci.",
       tag: "THE GIRLS",
       category: "hangout",
+      cardType: "card-landscape",
       date: "2026",
       tilt: "tilt-5",
       tape: "tape-left"
@@ -264,6 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Obrolan santai dan tawa ceria para mahasiswi di sela pergantian mata kuliah.",
       tag: "THE GIRLS",
       category: "hangout",
+      cardType: "card-landscape",
       date: "2026",
       tilt: "tilt-6",
       tape: "tape-right"
@@ -275,6 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Pose candid manis mahasiswi 1KA19 yang terekam abadi di kapsul waktu ini.",
       tag: "THE GIRLS",
       category: "hangout",
+      cardType: "card-landscape",
       date: "2026",
       tilt: "tilt-1",
       tape: "tape-slant"
@@ -286,6 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Meja kantin yang disatukan panjang, obrolan ngalor-ngidul, dan kenikmatan makan bersama.",
       tag: "MAKAN BARENG",
       category: "hangout",
+      cardType: "card-tall",
       date: "2026",
       tilt: "tilt-2",
       tape: "tape-left"
@@ -297,6 +384,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Healing seru melepas penat tugas kuliah di SMS Karawaci bareng kawan sekelas.",
       tag: "MALL SMS",
       category: "hangout",
+      cardType: "card-landscape",
       date: "2026",
       tilt: "tilt-3",
       tape: "tape-right"
@@ -308,6 +396,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Foto wajib di cermin lift kampus Karawaci saat naik atau turun bareng menuju lantai kelas.",
       tag: "LIFT MOMENT",
       category: "chaos",
+      cardType: "card-portrait",
       date: "2026",
       tilt: "tilt-4",
       tape: "tape-slant"
@@ -319,6 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Ekspresi kocak melet lidah yang tertangkap kamera, bukti pertemanan yang tanpa jaim.",
       tag: "CHAOS & FUN",
       category: "chaos",
+      cardType: "card-landscape",
       date: "2026",
       tilt: "tilt-5",
       tape: "tape-left"
@@ -330,6 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Kelakuan random anak 1KA19 yang bikin seisi kelas nggak bisa menahan tawa.",
       tag: "INSIDE CHAOS",
       category: "chaos",
+      cardType: "card-landscape",
       date: "2026",
       tilt: "tilt-6",
       tape: "tape-right"
@@ -341,6 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Tingkah absurd spontan kawan sekelas yang menjadi memori paling menghibur.",
       tag: "INSIDE CHAOS",
       category: "chaos",
+      cardType: "card-landscape",
       date: "2026",
       tilt: "tilt-1",
       tape: "tape-slant"
@@ -352,6 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Video momen santai saat makan buah bersama di waktu istirahat perkuliahan.",
       tag: "VIDEO CANDID",
       category: "chaos",
+      cardType: "card-landscape",
       date: "2026",
       tilt: "tilt-2",
       tape: "tape-left"
@@ -590,24 +683,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const photoWallUpload = document.getElementById('photo-wall-upload');
 
   function normalizePhotoItem(item, idx) {
-    if (typeof item === 'string') {
-      const fileName = item.split('/').pop().replace(/\.[^/.]+$/, "").replace(/%20|[_-]/g, " ");
-      return {
-        id: `photo-${idx}`,
-        image: item,
-        title: fileName || `Momen 1KA19 #${idx + 1}`,
-        desc: `Foto kenangan 1KA19: ${fileName}`,
-        tag: "MOMENT",
-        category: "class",
-        date: "2026",
-        tilt: `tilt-${(idx % 6) + 1}`,
-        tape: (idx % 3 === 0) ? 'tape-slant' : ((idx % 3 === 1) ? 'tape-left' : 'tape-right')
-      };
+    let obj = typeof item === 'string' ? {
+      id: `photo-${idx}`,
+      image: item,
+      title: item.split('/').pop().replace(/\.[^/.]+$/, "").replace(/%20|[_-]/g, " "),
+      desc: `Foto kenangan 1KA19: ${item}`,
+      tag: "MOMENT",
+      category: "class",
+      date: "2026"
+    } : { ...item };
+
+    if (!obj.cardType && obj.image) {
+      const lower = obj.image.toLowerCase();
+      if (lower.includes('roaster') || lower.includes('makan%20bareng') || lower.includes('makan bareng')) {
+        obj.cardType = 'card-tall';
+      } else if (lower.includes('barisan') || lower.includes('ketua') || lower.includes('lift') || lower.includes('kembar')) {
+        obj.cardType = 'card-portrait';
+      } else {
+        obj.cardType = 'card-landscape';
+      }
     }
+
     return {
-      ...item,
-      tilt: item.tilt || `tilt-${(idx % 6) + 1}`,
-      tape: item.tape || ((idx % 3 === 0) ? 'tape-slant' : ((idx % 3 === 1) ? 'tape-left' : 'tape-right'))
+      ...obj,
+      tilt: obj.tilt || `tilt-${(idx % 6) + 1}`,
+      tape: obj.tape || ((idx % 3 === 0) ? 'tape-slant' : ((idx % 3 === 1) ? 'tape-left' : 'tape-right'))
     };
   }
 
@@ -626,8 +726,9 @@ document.addEventListener('DOMContentLoaded', () => {
     momentsGrid.innerHTML = filtered.map(m => {
       const hasImg = Boolean(m.image);
       const isVideo = hasImg && m.image.toLowerCase().endsWith('.mp4');
+      const cardTypeClass = m.cardType || 'card-landscape';
       return `
-        <article class="polaroid-pin-card ${m.tilt} reveal-fade" data-moment-id="${m.id}" tabindex="0" role="button" title="Klik untuk melihat foto berlayar penuh">
+        <article class="polaroid-pin-card ${cardTypeClass} ${m.tilt} reveal-fade" data-moment-id="${m.id}" tabindex="0" role="button" title="Klik untuk melihat foto berlayar penuh">
           <div class="tape-strip ${m.tape}" aria-hidden="true"></div>
           <div class="polaroid-inner">
             <div class="polaroid-media">
@@ -1435,29 +1536,122 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     7. SCROLL INTERSECTION OBSERVER (REVEAL ANIMATIONS)
+     7. PROFESSIONAL RICH ANIMATIONS SYSTEM (NASA / AWWWARDS TIER)
      ========================================================================== */
+
+  // 1. Animated Stat Counter (Smooth Precision Count Up)
+  let statsCounted = false;
+  function runStatsCounter() {
+    if (statsCounted) return;
+    statsCounted = true;
+
+    const statElements = document.querySelectorAll('.stat-card .stat-value');
+    statElements.forEach(el => {
+      const originalText = el.textContent.trim();
+      const targetNum = parseInt(originalText.replace(/[^0-9]/g, ''), 10);
+      
+      if (!isNaN(targetNum) && targetNum > 0) {
+        const startNum = targetNum > 100 ? targetNum - 40 : 0;
+        const duration = 1800; // ms
+        const startTime = performance.now();
+
+        const updateCounter = (currentTime) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease-out expo curve for crisp deceleration
+          const easeOut = 1 - Math.pow(2, -10 * progress);
+          const currentVal = Math.round(startNum + (targetNum - startNum) * easeOut);
+
+          el.textContent = currentVal;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            el.textContent = originalText;
+          }
+        };
+        requestAnimationFrame(updateCounter);
+      }
+    });
+  }
+
+  // 2. Cascade Staggered Scroll Observer
   function setupRevealObserver() {
     const reveals = document.querySelectorAll('.reveal-fade:not(.revealed), .reveal-scale:not(.revealed)');
     if (!('IntersectionObserver' in window)) {
       reveals.forEach(el => el.classList.add('revealed'));
+      runStatsCounter();
       return;
     }
 
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          obs.unobserve(entry.target);
+          const el = entry.target;
+
+          // Trigger stats counter if entering class stats
+          if (el.classList.contains('class-stats-grid') || el.closest('.class-stats-grid')) {
+            runStatsCounter();
+          }
+
+          // Calculate staggered delay for grid & list children
+          const parent = el.parentElement;
+          if (parent && (parent.classList.contains('photo-wall-board') || 
+                         parent.classList.contains('class-roster-grid') || 
+                         parent.classList.contains('people-grid') || 
+                         parent.classList.contains('class-stats-grid'))) {
+            const siblings = Array.from(parent.children).filter(c => c.classList.contains('reveal-fade') || c.classList.contains('reveal-scale'));
+            const idx = siblings.indexOf(el);
+            if (idx >= 0) {
+              const delay = Math.min((idx % 6) * 65, 360);
+              el.style.transitionDelay = `${delay}ms`;
+            }
+          }
+
+          el.classList.add('revealed');
+          obs.unobserve(el);
         }
       });
     }, {
-      rootMargin: '0px 0px -60px 0px',
-      threshold: 0.12
+      rootMargin: '0px 0px -45px 0px',
+      threshold: 0.08
     });
 
     reveals.forEach(el => observer.observe(el));
   }
   setupRevealObserver();
+
+  // 3. Interactive 3D Card Hover Tilt Physics (Desktop)
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    const interactiveCards = document.querySelectorAll('.polaroid-pin-card, .roster-card, .hero-frame-wrap');
+
+    interactiveCards.forEach(card => {
+      let isHovered = false;
+
+      card.addEventListener('mouseenter', () => {
+        isHovered = true;
+      });
+
+      card.addEventListener('mousemove', (e) => {
+        if (!isHovered) return;
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // Gentle tilt angles (max 6 degrees for sleek luxury feel)
+        const rotateX = ((y - centerY) / centerY) * -6;
+        const rotateY = ((x - centerX) / centerX) * 6;
+
+        card.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-8px) scale(1.025)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        isHovered = false;
+        card.style.transform = '';
+      });
+    });
+  }
 
 });
