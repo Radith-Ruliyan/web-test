@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1KA19 — The First Chapter | Digital Time Capsule</title>
+  <meta name="description" content="Digital Time Capsule kelas 1KA19 Sistem Informasi Universitas Gunadarma Karawaci (2026-2027). One class. One beginning. Countless memories.">
+
+  <!-- Favicon SVG inline -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234B164C'/><text x='50%' y='58%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='38' fill='%23F0AD4E'>1K</text></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="intro-active">
+
+  <!-- SUBTLE NOISE & GRAIN OVERLAY -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ================================================== -->
+  <!-- 3. OPENING / CINEMATIC INTRO                      -->
+  <!-- ================================================== -->
+  <aside id="cinematic-intro" class="cinematic-intro" aria-label="Intro Sinematik 1KA19">
+    <div class="intro-bg-glow"></div>
+    <div class="intro-container">
+      
+      <div class="intro-step intro-step-1" id="intro-step-1">
+        <span class="intro-sub">UNIVERSITAS GUNADARMA</span>
+        <span class="intro-loc">KARAWACI</span>
+      </div>
+
+      <div class="intro-step intro-step-2" id="intro-step-2">
+        <span class="intro-year">2026</span>
+      </div>
+
+      <div class="intro-step intro-step-3" id="intro-step-3">
+        <h1 class="intro-title">1KA19</h1>
+        <div class="intro-chapter-badge">THE FIRST CHAPTER</div>
+      </div>
+
+      <div class="intro-step intro-step-4" id="intro-step-4">
+        <p class="intro-quote">
+          “We didn’t know we were making memories.<br>
+          We were just living them.”
+        </p>
+        
+        <button id="btn-open-chapter" class="btn-open-chapter" type="button">
+          <span>OPEN THE CHAPTER</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+
+        <button id="btn-skip-intro" class="btn-skip-intro" type="button">skip intro</button>
+      </div>
+
+    </div>
+
+    <!-- Chapter Book Opening Shutter Effect -->
+    <div class="intro-curtain intro-curtain-left"></div>
+    <div class="intro-curtain intro-curtain-right"></div>
+  </aside>
+
+  <!-- ================================================== -->
+  <!-- 5. NAVIGATION                                      -->
+  <!-- ================================================== -->
+  <header id="main-nav" class="main-nav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-code">1KA19</span>
+        <span class="brand-sub">THE FIRST CHAPTER</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" aria-label="Navigasi Utama">
+        <a href="#hero" class="nav-link">THE CHAPTER</a>
+        <a href="#meet-class" class="nav-link">OUR CLASS</a>
+        <a href="#timeline" class="nav-link">TIMELINE</a>
+        <a href="#moments" class="nav-link">MOMENTS</a>
+        <a href="#people" class="nav-link">PEOPLE</a>
+        <a href="#chaos" class="nav-link">CHAOS</a>
+        <a href="#letters" class="nav-link">LETTERS</a>
+      </nav>
+
+      <!-- Ambient Audio Toggle -->
+      <div class="nav-actions">
+        <button id="audio-toggle" class="audio-toggle" type="button" aria-label="Nyalakan / Matikan Musik Latar" title="Nostalgic Ambient Audio">
+          <span class="sound-wave">
+            <span></span><span></span><span></span><span></span>
+          </span>
+          <span class="audio-label">MEMORIES AMBIENCE</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-toggle" class="mobile-toggle" type="button" aria-label="Buka Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <a href="#hero" class="mobile-link">THE CHAPTER</a>
+        <a href="#how-it-started" class="mobile-link">HOW IT STARTED</a>
+        <a href="#meet-class" class="mobile-link">OUR CLASS</a>
+        <a href="#timeline" class="mobile-link">TIMELINE</a>
+        <a href="#moments" class="mobile-link">MOMENTS</a>
+        <a href="#people" class="mobile-link">PEOPLE</a>
+        <a href="#chaos" class="mobile-link">THE CHAOS</a>
+        <a href="#inside-jokes" class="mobile-link">INSIDE JOKES</a>
+        <a href="#before-we-roll" class="mobile-link">BEFORE WE ROLL</a>
+        <a href="#letters" class="mobile-link">LETTERS</a>
+        <a href="#final-chapter" class="mobile-link">WE WERE HERE</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================================================== -->
+  <!-- MAIN CONTENT CONTAINER                             -->
+  <!-- ================================================== -->
+  <main id="main-content">
+
+    <!-- ================================================== -->
+    <!-- 4. HERO SECTION                                    -->
+    <!-- ================================================== -->
+    <section id="hero" class="section hero-section">
+      <div class="container hero-container">
+        
+        <div class="hero-header reveal-fade">
+          <div class="hero-meta-badge">
+            <span class="badge-dot"></span>
+            <span>SISTEM INFORMASI &bull; UNIVERSITAS GUNADARMA KARAWACI</span>
+          </div>
+
+          <h1 class="hero-title">1KA19</h1>
+          <p class="hero-chapter-title">THE FIRST CHAPTER</p>
+          <span class="hero-years">2026 — 2027</span>
+
+          <p class="hero-tagline">
+            “One class. One beginning. Countless memories.”
+          </p>
+        </div>
+
+        <!-- LARGE CINEMATIC CLASS PHOTO PLACEHOLDER -->
+        <div class="hero-frame-wrap reveal-scale">
+          <div class="memory-placeholder aspect-cinematic hero-placeholder" data-label="OUR CLASS PHOTO">
+            <div class="placeholder-overlay"></div>
+            <div class="placeholder-corners">
+              <span class="corner tl"></span>
+              <span class="corner tr"></span>
+              <span class="corner bl"></span>
+              <span class="corner br"></span>
+            </div>
+            <div class="placeholder-content">
+              <div class="placeholder-icon-ring">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+              </div>
+              <span class="placeholder-badge">OUR CLASS PHOTO</span>
+              <p class="placeholder-hint">Siap disematkan untuk potret utama kelas 1KA19</p>
+              <span class="placeholder-meta">GUNADARMA KARAWACI &bull; 2026</span>
+            </div>
+          </div>
+          <p class="hero-frame-caption">The frame awaits the moment we freeze in time together.</p>
+        </div>
+
+        <div class="scroll-cue reveal-fade">
+          <span>SCROLL TO EXPLORE</span>
+          <div class="scroll-line"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 6. "HOW IT STARTED"                                -->
+    <!-- ================================================== -->
+    <section id="how-it-started" class="section section-story">
+      <div class="container container-editorial">
+        <div class="story-tag reveal-fade">PROLOGUE</div>
+        
+        <h2 class="story-heading reveal-fade">
+          “At first, it was just a class number.”
+        </h2>
+
+        <div class="story-number reveal-fade">1KA19</div>
+
+        <div class="story-body reveal-fade">
+          <p class="story-lead">
+            Sekumpulan nama yang awalnya mungkin belum saling mengenal, duduk di ruangan yang sama,
+            mengerjakan tugas yang sama, dan perlahan menjadi bagian dari cerita satu sama lain.
+          </p>
+          <p class="story-sub">
+            Kita datang dari latar belakang yang berbeda, membawa rasa canggung di hari-hari pertama,
+            hingga akhirnya lorong kampus Karawaci dan ruang kuliah menjadi saksi tawa paling jujur di sela kepusingan semester satu.
+          </p>
+        </div>
+
+        <div class="editorial-divider reveal-fade">
+          <span>&loz;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 7. OUR CLASS (MEET 1KA19)                          -->
+    <!-- ================================================== -->
+    <section id="meet-class" class="section section-class">
+      <div class="container">
+        
+        <div class="section-head reveal-fade">
+          <span class="section-kicker">THE CLASS IDENTITY</span>
+          <h2 class="section-title">MEET 1KA19</h2>
+          <p class="section-subtitle">Empat puluhan cerita yang ditakdirkan berkumpul di satu ruang yang sama.</p>
+        </div>
+
+        <!-- STATS SECTION -->
+        <div class="class-stats-grid reveal-fade">
+          <div class="stat-card">
+            <span class="stat-value">XX</span>
+            <span class="stat-label">STUDENTS</span>
+            <span class="stat-note">jiwa yang saling melengkapi</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">1</span>
+            <span class="stat-label">CLASS</span>
+            <span class="stat-note">sistem informasi karawaci</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">1</span>
+            <span class="stat-label">FIRST CHAPTER</span>
+            <span class="stat-note">yang tak akan terulang</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">2026</span>
+            <span class="stat-label">THE BEGINNING</span>
+            <span class="stat-note">tempat langkah bermula</span>
+          </div>
+        </div>
+
+        <!-- CLASS MEMBERS GRID PREVIEW -->
+        <div class="class-grid-header reveal-fade">
+          <h3 class="class-roster-title">CLASS ROSTER</h3>
+          <span class="class-roster-count">1KA19 DIRECTORY</span>
+        </div>
+
+        <div id="class-roster-container" class="class-roster-grid">
+          <!-- Dynamically populated from script.js classMembers -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 8. MEMORY TIMELINE                                 -->
+    <!-- ================================================== -->
+    <section id="timeline" class="section section-timeline">
+      <div class="container container-narrow">
+        
+        <div class="section-head reveal-fade">
+          <span class="section-kicker">CHRONICLES</span>
+          <h2 class="section-title timeline-headline">
+            THE DAYS WE DIDN'T KNOW WE'D MISS.
+          </h2>
+          <p class="section-subtitle">
+            Jejak langkah semester 1 yang berlalu begitu cepat di antara tenggat tugas dan cangkir kopi.
+          </p>
+        </div>
+
+        <div class="timeline-vertical" id="timeline-container">
+          <!-- Dynamically populated from script.js timelineData -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 9. PHOTO MEMORY WALL (MOMENTS)                     -->
+    <!-- ================================================== -->
+    <section id="moments" class="section section-moments">
+      <div class="container">
+        
+        <div class="section-head reveal-fade">
+          <span class="section-kicker">SCRAPBOOK ARCHIVE</span>
+          <h2 class="section-title">MOMENTS</h2>
+          <p class="section-subtitle">“Small moments. Big memories.”</p>
+        </div>
+
+        <!-- Filter / Tabs -->
+        <div class="moments-filter reveal-fade" role="tablist">
+          <button class="filter-btn active" data-filter="all">ALL MEMORIES</button>
+          <button class="filter-btn" data-filter="class">IN CLASS</button>
+          <button class="filter-btn" data-filter="hangout">HANGOUTS</button>
+          <button class="filter-btn" data-filter="chaos">CANDID</button>
+        </div>
+
+        <!-- Masonry / Editorial Scrapbook Grid -->
+        <div class="moments-grid" id="moments-grid">
+          <!-- Dynamically populated from script.js momentsData -->
+        </div>
+
+        <div class="moments-footer-note reveal-fade">
+          <p>Setiap foto nantinya dapat dibuka dalam mode sinematik berlayar penuh.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 10. THE PEOPLE                                     -->
+    <!-- ================================================== -->
+    <section id="people" class="section section-people">
+      <div class="container">
+        
+        <div class="section-head reveal-fade">
+          <span class="section-kicker">THE SOULS</span>
+          <h2 class="section-title">THE PEOPLE WHO MADE IT 1KA19</h2>
+          <p class="section-subtitle">
+            Bukan sekadar daftar nama di presensi, melainkan pribadi yang memberi nyawa pada kelas ini.
+          </p>
+        </div>
+
+        <div class="people-grid" id="people-grid">
+          <!-- Dynamically populated from script.js peopleData -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 11. THE CHAOS (PLAYFUL INTERLUDE)                 -->
+    <!-- ================================================== -->
+    <section id="chaos" class="section section-chaos">
+      <div class="container">
+        
+        <div class="section-head reveal-fade">
+          <span class="section-kicker">UNFILTERED MEMORIES</span>
+          <h2 class="section-title">THE CHAOS</h2>
+          <p class="section-subtitle">“Because not everything needs to make sense.”</p>
+        </div>
+
+        <div class="chaos-intro reveal-fade">
+          <p>
+            Di balik slide presentasi dan materi dosen, ada obrolan grup WhatsApp pukul 2 pagi,
+            pertanyaan panik di hari H pengumpulan, dan kelakuan acak yang membuat kita tertawa lepas.
+          </p>
+        </div>
+
+        <div class="chaos-header-badge reveal-fade">
+          <span>MOST LIKELY TO...</span>
+          <small>Pilih dan dukung nominasi khas 1KA19 (Suara tersimpan di browser Anda)</small>
+        </div>
+
+        <div class="chaos-grid" id="chaos-grid">
+          <!-- Dynamically generated interactive voting cards -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 12. INSIDE JOKES                                   -->
+    <!-- ================================================== -->
+    <section id="inside-jokes" class="section section-jokes">
+      <div class="container container-editorial">
+        
+        <div class="section-head reveal-fade">
+          <span class="section-kicker">PRIVATE ARCHIVES</span>
+          <h2 class="section-title">YOU HAD TO BE THERE.</h2>
+          <p class="section-subtitle">
+            Hal-hal yang mungkin terdengar aneh bagi orang luar, tapi langsung membuat anak 1KA19 tersenyum sendiri.
+          </p>
+        </div>
+
+        <div class="jokes-accordion" id="jokes-accordion">
+          <!-- Dynamically populated from script.js insideJokesData -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 16. BEFORE WE ROLL                                 -->
+    <!-- ================================================== -->
+    <section id="before-we-roll" class="section section-roll">
+      <div class="container container-editorial">
+        <div class="roll-card reveal-fade">
+          <div class="roll-badge">A GENTLE TRUTH</div>
+          <h2 class="roll-title">“The class may change. The chapter doesn’t.”</h2>
+          
+          <div class="roll-prose">
+            <p>
+              Maybe next semester we’ll sit with different people.
+            </p>
+            <p>
+              Maybe the class number on our schedule will change.
+            </p>
+            <p>
+              Maybe our daily routines will scatter across different rooms.
+            </p>
+            <p class="roll-highlight">
+              But this chapter will always be 1KA19.
+            </p>
+            <p class="roll-closing">
+              Kalaupun semester depan kita tidak lagi di ruangan yang sama, setidaknya kita pernah berjuang bareng
+              melewati semester pertama di Gunadarma Karawaci.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 13. LETTERS TO 1KA19                               -->
+    <!-- ================================================== -->
+    <section id="letters" class="section section-letters">
+      <div class="container">
+        
+        <div class="section-head reveal-fade">
+          <span class="section-kicker">TIME CAPSULE NOTES</span>
+          <h2 class="section-title">A LETTER TO 1KA19</h2>
+          <p class="section-subtitle">“Before we become memories to each other.”</p>
+        </div>
+
+        <!-- Form Tambah Surat / Pesan -->
+        <div class="letter-compose-box reveal-fade">
+          <div class="letter-compose-header">
+            <span class="stamp-icon">&sect;</span>
+            <div>
+              <h3>Tinggalkan Pesan di Time Capsule</h3>
+              <p>Tuliskan sepatah kata, harapan, atau terima kasih untuk teman-teman 1KA19.</p>
+            </div>
+          </div>
+          
+          <form id="letter-form" class="letter-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="letter-author">Nama Anda</label>
+                <input type="text" id="letter-author" placeholder="Contoh: Radith / Nama Panggilan" required maxlength="50">
+              </div>
+              <div class="form-group">
+                <label for="letter-date">Periode / Tanggal</label>
+                <input type="text" id="letter-date" value="Semester 1 — 2026" readonly>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="letter-content">Dear 1KA19,</label>
+              <textarea id="letter-content" rows="4" placeholder="Tuliskan apapun yang ingin kamu sampaikan sebelum semester ini berganti..." required maxlength="600"></textarea>
+            </div>
+
+            <div class="form-submit-row">
+              <span class="form-notice">*Pesan disimpan langsung ke memori lokal browser Anda</span>
+              <button type="submit" class="btn-submit-letter">
+                <span>SIMPAN KE CAPSULE</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 2L11 13"></path>
+                  <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Letters Display Wall -->
+        <div class="letters-wall" id="letters-wall">
+          <!-- Dynamically populated letters -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 14. "IF WE EVER FORGET"                            -->
+    <!-- ================================================== -->
+    <section id="if-we-ever-forget" class="section section-forget">
+      <div class="container container-editorial">
+        
+        <div class="forget-sequence">
+          <p class="forget-line line-1 reveal-fade">
+            “If someday we forget what this felt like...”
+          </p>
+
+          <div class="forget-spacer"></div>
+
+          <p class="forget-line line-2 reveal-fade">
+            “come back here.”
+          </p>
+
+          <div class="forget-spacer"></div>
+
+          <p class="forget-line line-3 reveal-fade">
+            “this is where we were.”
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 15. FINAL CHAPTER ("WE WERE HERE.")                -->
+    <!-- ================================================== -->
+    <section id="final-chapter" class="section section-final">
+      <div class="container container-editorial">
+        
+        <div class="final-flow reveal-fade">
+          <span class="final-epilogue">EPILOGUE</span>
+          <h2 class="final-lead">AND THEN, LIFE MOVED ON.</h2>
+
+          <div class="final-lines">
+            <p>Maybe the class changed.</p>
+            <p>Maybe the seats changed.</p>
+            <p>Maybe the people changed.</p>
+            <p>Maybe we changed.</p>
+          </div>
+
+          <div class="final-interlude">
+            <span class="but-once">BUT ONCE,</span>
+            <span class="we-were">WE WERE</span>
+            <span class="bold-code">1KA19.</span>
+          </div>
+
+          <div class="final-monument">
+            <h3 class="we-were-here-title">WE WERE HERE.</h3>
+            
+            <div class="final-stamp">
+              <span class="stamp-year">2026 — 2027</span>
+              <span class="stamp-dept">Sistem Informasi</span>
+              <span class="stamp-univ">Universitas Gunadarma Karawaci</span>
+            </div>
+
+            <p class="final-gratitude">
+              “Thank you for being part of the first chapter.”
+            </p>
+
+            <button id="btn-replay-story" class="btn-replay" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 4v6h6"></path>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+              <span>REPLAY OUR STORY</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================== -->
+  <!-- LIGHTBOX MODAL FOR MEMORIES                        -->
+  <!-- ================================================== -->
+  <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Penampil Foto Kenangan">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Tutup foto">&times;</button>
+      
+      <div class="lightbox-image-wrap">
+        <div id="lightbox-placeholder" class="memory-placeholder aspect-landscape">
+          <!-- Filled dynamically -->
+        </div>
+      </div>
+
+      <div class="lightbox-meta">
+        <span id="lightbox-tag" class="lightbox-tag">MOMENT</span>
+        <h3 id="lightbox-title" class="lightbox-title">Memori 1KA19</h3>
+        <p id="lightbox-desc" class="lightbox-desc">Deskripsi momen ini...</p>
+        <span id="lightbox-date" class="lightbox-date">Gunadarma Karawaci &bull; 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
