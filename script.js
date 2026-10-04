@@ -26,43 +26,48 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: "02",
-      name: "NAME PLACEHOLDER",
-      nickname: "NICKNAME",
-      role: "Student",
-      quote: "Replace this with their own memorable sentence or words.",
-      funFact: "Fun fact: Datang selalu 5 menit sebelum absen ditutup."
+      name: "Ketua Kelas",
+      nickname: "Pak Ketua",
+      role: "Class Leader",
+      quote: "Memimpin 1KA19 dengan penuh kebanggaan, tanggung jawab, dan tawa.",
+      funFact: "Fun fact: Garda terdepan info dosen & komando solid kelas.",
+      image: "assets/Photo/KETUA.jpeg"
     },
     {
       id: "03",
-      name: "NAME PLACEHOLDER",
-      nickname: "NICKNAME",
+      name: "Si Ganteng",
+      nickname: "Ganteng 1KA19",
       role: "Student",
-      quote: "Replace this with their own memorable sentence or words.",
-      funFact: "Fun fact: Spesialis pembagi hotspot di pojok kelas."
+      quote: "Karisma tetap menyala di setiap sudut lorong kampus Karawaci.",
+      funFact: "Fun fact: Selalu tampil rapi dan estetik di setiap jepretan kamera.",
+      image: "assets/Photo/SIGANTENG.jpeg"
     },
     {
       id: "04",
-      name: "NAME PLACEHOLDER",
-      nickname: "NICKNAME",
-      role: "Student",
-      quote: "Replace this with their own memorable sentence or words.",
-      funFact: "Fun fact: Penyelamat deadline kelompok jam 23:59."
+      name: "Si Kembar",
+      nickname: "Duo Kembar",
+      role: "Students",
+      quote: "Dua raga, satu frekuensi kebersamaan tak terpisahkan di 1KA19.",
+      funFact: "Fun fact: Selalu kompak jalan bareng dari selasar sampai ruang kelas.",
+      image: "assets/Photo/SI%20KEMBAR.jpeg"
     },
     {
       id: "05",
-      name: "NAME PLACEHOLDER",
-      nickname: "NICKNAME",
-      role: "Student",
-      quote: "Replace this with their own memorable sentence or words.",
-      funFact: "Fun fact: Pembuat meme kelas paling spontan."
+      name: "Azhar (Eksis Mode)",
+      nickname: "Azhar",
+      role: "Mood Maker",
+      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
+      funFact: "Fun fact: Mood maker yang selalu bikin suasana kelas cair dan ceria.",
+      image: "assets/Photo/AZHAREKSIS.jpeg"
     },
     {
       id: "06",
-      name: "NAME PLACEHOLDER",
-      nickname: "NICKNAME",
-      role: "Student",
-      quote: "Replace this with their own memorable sentence or words.",
-      funFact: "Fun fact: Kopi andalan sebelum kelas pagi Karawaci."
+      name: "Srikandi 1KA19",
+      nickname: "Cecan Squad",
+      role: "Students",
+      quote: "Penyemangat dan pemberi warna cerah di setiap hari perkuliahan.",
+      funFact: "Fun fact: Sudut kelas paling rapi dengan catatan materi terlengkap.",
+      image: "assets/Photo/CECAN.jpeg"
     }
   ];
 
@@ -84,37 +89,41 @@ document.addEventListener('DOMContentLoaded', () => {
       date: "OKT 2026",
       kicker: "ACADEMIC LIFE",
       title: "The First Lecture & Confusions",
-      desc: "Materi pengantar algoritma dan konsep sistem informasi pertama kali dibuka. Muka-muka panik mulai terlihat saling melirik satu sama lain.",
+      desc: "Materi algoritma dan sistem informasi pertama kali dibuka. Sesi foto bareng di ruang kelas setelah jam kuliah selesai dengan muka-muka penuh semangat baru.",
       location: "Ruang Kelas 1KA19",
-      tag: "FIRST LECTURE",
-      aspect: "aspect-portrait"
+      tag: "FOTBAR KELAS",
+      aspect: "aspect-portrait",
+      image: "assets/Photo/FOTBAR%20KELAS.jpeg"
     },
     {
       date: "NOV 2026",
-      kicker: "THE BATTLE",
-      title: "First Group Assignment Chaos",
-      desc: "Kerja kelompok pertama. Pembagian tugas di grup chat, janji kumpul jam 1 tapi baru lengkap jam 3, diakhiri makan bareng yang lebih lama dari ngerjain tugasnya.",
+      kicker: "THE BATTLE & FEAST",
+      title: "Group Assignment & Makan Bareng",
+      desc: "Kerja kelompok pertama. Pembagian tugas di grup chat, janji kumpul jam 1 baru lengkap jam 3, dan diakhiri sesi makan bareng hangat yang lebih lama dari ngerjain tugasnya.",
       location: "Kantin & Selasar Kampus",
-      tag: "FIRST ASSIGNMENT",
-      aspect: "aspect-landscape"
+      tag: "MAKAN BARENG",
+      aspect: "aspect-landscape",
+      image: "assets/Photo/MAKAN%20BARENG.jpeg"
     },
     {
       date: "DES 2026",
-      kicker: "STAGE FRIGHT",
-      title: "First Class Presentation",
-      desc: "Slide presentasi yang diedit sampai menit-menit terakhir. Rasa deg-degan saat berdiri di depan kelas, dan tawa lega saat sesi tanya jawab selesai.",
+      kicker: "SOLIDARITY",
+      title: "Barisan Laki-Laki & Class Presentation",
+      desc: "Formasi kompak para mahasiswa 1KA19. Slide presentasi yang diedit hingga menit-menit akhir dan solidaritas barisan yang saling menyemangati di depan kelas.",
       location: "Podium Kelas 1KA19",
-      tag: "FIRST PRESENTATION",
-      aspect: "aspect-landscape"
+      tag: "THE BOYS",
+      aspect: "aspect-landscape",
+      image: "assets/Photo/BARISAN%20LAKI%20LAKI%201KA19.jpeg"
     },
     {
       date: "2026 — 2027",
       kicker: "INTIMACY",
-      title: "The First Laugh & Late-Night Hangouts",
-      desc: "Saat obrolan bukan lagi seputar tugas kuliah, melainkan cerita hidup masing-masing sambil menunggu macet Karawaci mereda.",
-      location: "Warung Kopi & Sudut Karawaci",
-      tag: "FIRST LAUGH",
-      aspect: "aspect-polaroid"
+      title: "Late-Night Hangouts & Mall SMS Trip",
+      desc: "Saat obrolan bukan lagi seputar tugas kuliah, melainkan jalan-jalan santai melepas penat ke Mall SMS Karawaci sambil menunggu macet mereda.",
+      location: "Summarecon Mall Serpong & Karawaci",
+      tag: "MALL SMS",
+      aspect: "aspect-polaroid",
+      image: "assets/Photo/MALL%20SMS.jpeg"
     }
   ];
 
@@ -122,11 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
    * ==========================================================================
    * DINDING KENANGAN ACAK (THE SCATTERED PHOTO WALL)
    * --------------------------------------------------------------------------
-   * Anda bisa menambahkan BANYAK FOTO LANGSUNG di bawah ini!
-   * Cukup tambahkan nama file foto di dalam array:
-   *   "assets/Photo/nama_foto.jpg",
-   * Atau dalam bentuk objek lengkap dengan judul & kategori:
-   *   { image: "assets/Photo/nama.jpg", title: "Judul Momen", tag: "DI KELAS", category: "class" },
+   * Semua 20 foto dan video kenangan 1KA19 tertempel rapi di sini
+   * dengan konteks dan kategori sesuai nama file masing-masing!
    * ==========================================================================
    */
   const photoWallGallery = [
@@ -154,10 +160,10 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: "pw-3",
-      image: "assets/Photo/CLASS%20ROASTER%20AZHAR.jpeg",
-      title: "Azhar — 1KA19",
-      desc: "Mahasiswa 1KA19 Sistem Informasi Gunadarma Karawaci.",
-      tag: "ROSTER",
+      image: "assets/Photo/FOTBAR%20KELAS.jpeg",
+      title: "Fotbar di Ruang Kelas",
+      desc: "Foto bersama seluruh kawan kelas setelah usai jam mata kuliah di kampus Karawaci.",
+      tag: "IN CLASS",
       category: "class",
       date: "2026",
       tilt: "tilt-3",
@@ -165,21 +171,21 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: "pw-4",
-      image: "",
-      title: "Sore Santai Setelah Kuliah",
-      desc: "Menikmati langit sore Karawaci sambil menghabiskan sisa obrolan sebelum pulang ke rumah masing-masing.",
-      tag: "HANGOUTS",
-      category: "hangout",
+      image: "assets/Photo/BARISAN%20LAKI%20LAKI%201KA19.jpeg",
+      title: "Barisan Laki-Laki 1KA19",
+      desc: "Formasi kompak para cowok 1KA19 di depan kelas dengan gaya santai andalan.",
+      tag: "THE BOYS",
+      category: "class",
       date: "2026",
       tilt: "tilt-4",
       tape: "tape-slant"
     },
     {
       id: "pw-5",
-      image: "",
-      title: "Papan Tulis & Catatan Bersama",
-      desc: "Coretan rumus dan flowchart yang memenuhi papan saat belajar kelompok dadakan.",
-      tag: "IN CLASS",
+      image: "assets/Photo/CLASS%20ROASTER%20AZHAR.jpeg",
+      title: "Class Roster — Azhar",
+      desc: "Potret resmi roster 1KA19: Azhar, mahasiswa Sistem Informasi Karawaci.",
+      tag: "ROSTER",
       category: "class",
       date: "2026",
       tilt: "tilt-5",
@@ -187,36 +193,168 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: "pw-6",
-      image: "",
-      title: "Makan Siang Bareng 1KA19",
-      desc: "Meja kantin yang digabung jadi panjang agar semua bisa duduk bareng.",
-      tag: "HANGOUTS",
-      category: "hangout",
+      image: "assets/Photo/AZHAREKSIS.jpeg",
+      title: "Azhar Eksis di Kelas",
+      desc: "Pose penuh senyum dan rasa percaya diri Azhar yang selalu menghidupkan suasana kelas.",
+      tag: "CANDID",
+      category: "chaos",
       date: "2026",
       tilt: "tilt-6",
       tape: "tape-right"
     },
     {
       id: "pw-7",
-      image: "",
-      title: "Ekspresi Selesai Kuis",
-      desc: "Campuran rasa pasrah, lega, dan saling tanya 'lu tadi nomor tiga jawab apa?'.",
-      tag: "CANDID",
-      category: "chaos",
+      image: "assets/Photo/KETUA.jpeg",
+      title: "Pak Ketua Kelas 1KA19",
+      desc: "Sudut pandang percaya diri sang ketua bersama rekan-rekan seperjuangan 1KA19.",
+      tag: "LEADERSHIP",
+      category: "class",
       date: "2026",
       tilt: "tilt-1",
       tape: "tape-slant"
     },
     {
       id: "pw-8",
-      image: "",
-      title: "Candid Momen Tertawa Lepas",
-      desc: "Momen spontan ketika lelucon garing tiba-tiba terdengar sangat lucu di jam rawan mengantuk.",
-      tag: "CANDID",
+      image: "assets/Photo/SIGANTENG.jpeg",
+      title: "Si Ganteng 1KA19",
+      desc: "Pose menawan dan rapi salah satu mahasiswa andalan kelas 1KA19.",
+      tag: "THE SOUL",
+      category: "class",
+      date: "2026",
+      tilt: "tilt-2",
+      tape: "tape-left"
+    },
+    {
+      id: "pw-9",
+      image: "assets/Photo/SI%20KEMBAR.jpeg",
+      title: "Si Kembar 1KA19",
+      desc: "Duo kembar kompak yang selalu satu frekuensi dan bikin kelas makin ramai.",
+      tag: "DUO SQUAD",
+      category: "class",
+      date: "2026",
+      tilt: "tilt-3",
+      tape: "tape-right"
+    },
+    {
+      id: "pw-10",
+      image: "assets/Photo/CECAN.jpeg",
+      title: "Cecan 1KA19 (Circle 1)",
+      desc: "Senyuman manis mahasiswi 1KA19 yang selalu mencerahkan suasana kelas.",
+      tag: "THE GIRLS",
+      category: "hangout",
+      date: "2026",
+      tilt: "tilt-4",
+      tape: "tape-slant"
+    },
+    {
+      id: "pw-11",
+      image: "assets/Photo/CECAN2.jpeg",
+      title: "Cecan 1KA19 (Circle 2)",
+      desc: "Momen kebersamaan dan keceriaan srikandi 1KA19 di selasar kampus Karawaci.",
+      tag: "THE GIRLS",
+      category: "hangout",
+      date: "2026",
+      tilt: "tilt-5",
+      tape: "tape-left"
+    },
+    {
+      id: "pw-12",
+      image: "assets/Photo/CECAN3.jpeg",
+      title: "Cecan 1KA19 (Circle 3)",
+      desc: "Obrolan santai dan tawa ceria para mahasiswi di sela pergantian mata kuliah.",
+      tag: "THE GIRLS",
+      category: "hangout",
+      date: "2026",
+      tilt: "tilt-6",
+      tape: "tape-right"
+    },
+    {
+      id: "pw-13",
+      image: "assets/Photo/CECAN4.jpeg",
+      title: "Cecan 1KA19 (Circle 4)",
+      desc: "Pose candid manis mahasiswi 1KA19 yang terekam abadi di kapsul waktu ini.",
+      tag: "THE GIRLS",
+      category: "hangout",
+      date: "2026",
+      tilt: "tilt-1",
+      tape: "tape-slant"
+    },
+    {
+      id: "pw-14",
+      image: "assets/Photo/MAKAN%20BARENG.jpeg",
+      title: "Makan Bareng Sepulang Kuliah",
+      desc: "Meja kantin yang disatukan panjang, obrolan ngalor-ngidul, dan kenikmatan makan bersama.",
+      tag: "MAKAN BARENG",
+      category: "hangout",
+      date: "2026",
+      tilt: "tilt-2",
+      tape: "tape-left"
+    },
+    {
+      id: "pw-15",
+      image: "assets/Photo/MALL%20SMS.jpeg",
+      title: "Nongkrong di Summarecon Mall Serpong",
+      desc: "Healing seru melepas penat tugas kuliah di SMS Karawaci bareng kawan sekelas.",
+      tag: "MALL SMS",
+      category: "hangout",
+      date: "2026",
+      tilt: "tilt-3",
+      tape: "tape-right"
+    },
+    {
+      id: "pw-16",
+      image: "assets/Photo/LIFT.jpeg",
+      title: "Mirror Selfie di Lift Kampus",
+      desc: "Foto wajib di cermin lift kampus Karawaci saat naik atau turun bareng menuju lantai kelas.",
+      tag: "LIFT MOMENT",
+      category: "chaos",
+      date: "2026",
+      tilt: "tilt-4",
+      tape: "tape-slant"
+    },
+    {
+      id: "pw-17",
+      image: "assets/Photo/MELET.jpeg",
+      title: "Pose Melet — Candid Jahil",
+      desc: "Ekspresi kocak melet lidah yang tertangkap kamera, bukti pertemanan yang tanpa jaim.",
+      tag: "CHAOS & FUN",
+      category: "chaos",
+      date: "2026",
+      tilt: "tilt-5",
+      tape: "tape-left"
+    },
+    {
+      id: "pw-18",
+      image: "assets/Photo/FOTO%20LUCU.jpeg",
+      title: "Foto Lucu 1KA19 (Part 1)",
+      desc: "Kelakuan random anak 1KA19 yang bikin seisi kelas nggak bisa menahan tawa.",
+      tag: "INSIDE CHAOS",
+      category: "chaos",
+      date: "2026",
+      tilt: "tilt-6",
+      tape: "tape-right"
+    },
+    {
+      id: "pw-19",
+      image: "assets/Photo/FOTO%20LUCU2.jpeg",
+      title: "Foto Lucu 1KA19 (Part 2)",
+      desc: "Tingkah absurd spontan kawan sekelas yang menjadi memori paling menghibur.",
+      tag: "INSIDE CHAOS",
+      category: "chaos",
+      date: "2026",
+      tilt: "tilt-1",
+      tape: "tape-slant"
+    },
+    {
+      id: "pw-20",
+      image: "assets/Photo/MAKAN%20BUAH.mp4",
+      title: "Video Candid: Makan Buah Bareng",
+      desc: "Video momen santai saat makan buah bersama di waktu istirahat perkuliahan.",
+      tag: "VIDEO CANDID",
       category: "chaos",
       date: "2026",
       tilt: "tilt-2",
-      tape: "tape-slant"
+      tape: "tape-left"
     }
   ];
 
@@ -235,21 +373,24 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: "p2",
-      name: "NAME PLACEHOLDER 02",
-      sentence: "“Replace this with their memorable phrase or memory of 1KA19.”",
-      aspect: "aspect-portrait"
+      name: "Ketua Kelas",
+      sentence: "“Solidaritas 1KA19 itu nyata, dari panik bareng pas kuis sampai kebersamaan di luar kelas.”",
+      aspect: "aspect-portrait",
+      image: "assets/Photo/KETUA.jpeg"
     },
     {
       id: "p3",
-      name: "NAME PLACEHOLDER 03",
-      sentence: "“Replace this with their memorable phrase or memory of 1KA19.”",
-      aspect: "aspect-portrait"
+      name: "Si Ganteng",
+      sentence: "“Menemukan keluarga baru di Karawaci yang bikin hari-hari kuliah selalu punya alasan tersenyum.”",
+      aspect: "aspect-portrait",
+      image: "assets/Photo/SIGANTENG.jpeg"
     },
     {
       id: "p4",
-      name: "NAME PLACEHOLDER 04",
-      sentence: "“Replace this with their memorable phrase or memory of 1KA19.”",
-      aspect: "aspect-portrait"
+      name: "Srikandi 1KA19",
+      sentence: "“Setiap tawa di lorong kampus dan meja makan adalah kenangan berharga yang tak tergantikan.”",
+      aspect: "aspect-portrait",
+      image: "assets/Photo/CECAN.jpeg"
     }
   ];
 
@@ -484,14 +625,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     momentsGrid.innerHTML = filtered.map(m => {
       const hasImg = Boolean(m.image);
+      const isVideo = hasImg && m.image.toLowerCase().endsWith('.mp4');
       return `
         <article class="polaroid-pin-card ${m.tilt} reveal-fade" data-moment-id="${m.id}" tabindex="0" role="button" title="Klik untuk melihat foto berlayar penuh">
           <div class="tape-strip ${m.tape}" aria-hidden="true"></div>
           <div class="polaroid-inner">
             <div class="polaroid-media">
-              ${hasImg ? `
-                <img src="${m.image}" alt="${m.title}" loading="lazy">
+              ${hasImg ? (isVideo ? `
+                <video src="${m.image}" muted loop playsinline autoplay preload="metadata" class="polaroid-thumb-video"></video>
+                <div class="polaroid-video-badge">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span>VIDEO</span>
+                </div>
               ` : `
+                <img src="${m.image}" alt="${m.title}" loading="lazy">
+              `) : `
                 <div class="placeholder-overlay"></div>
                 <div class="placeholder-content" style="padding: 1.2rem; text-align: center;">
                   <div class="placeholder-icon-ring" style="width: 38px; height: 38px; margin: 0 auto 0.4rem;">
@@ -932,23 +1080,32 @@ document.addEventListener('DOMContentLoaded', () => {
     if (moment.image) {
       lightboxPlaceholder.classList.remove('aspect-landscape');
       lightboxPlaceholder.classList.add('has-real-photo');
-      lightboxPlaceholder.innerHTML = `
-        <img src="${moment.image}" alt="${moment.title}" class="lightbox-real-photo" loading="eager">
-      `;
+      const isVideo = moment.image.toLowerCase().endsWith('.mp4');
 
-      const img = lightboxPlaceholder.querySelector('img');
-      if (img) {
-        const updateRatio = () => {
-          if (img.naturalHeight > img.naturalWidth) {
-            lightboxPlaceholder.classList.add('is-portrait');
+      if (isVideo) {
+        lightboxPlaceholder.classList.remove('is-portrait');
+        lightboxPlaceholder.innerHTML = `
+          <video src="${moment.image}" controls autoplay playsinline class="lightbox-real-photo lightbox-video"></video>
+        `;
+      } else {
+        lightboxPlaceholder.innerHTML = `
+          <img src="${moment.image}" alt="${moment.title}" class="lightbox-real-photo" loading="eager">
+        `;
+
+        const img = lightboxPlaceholder.querySelector('img');
+        if (img) {
+          const updateRatio = () => {
+            if (img.naturalHeight > img.naturalWidth) {
+              lightboxPlaceholder.classList.add('is-portrait');
+            } else {
+              lightboxPlaceholder.classList.remove('is-portrait');
+            }
+          };
+          if (img.complete && img.naturalWidth > 0) {
+            updateRatio();
           } else {
-            lightboxPlaceholder.classList.remove('is-portrait');
+            img.onload = updateRatio;
           }
-        };
-        if (img.complete && img.naturalWidth > 0) {
-          updateRatio();
-        } else {
-          img.onload = updateRatio;
         }
       }
     } else {
@@ -983,6 +1140,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeLightbox() {
     if (!lightbox) return;
+    const vid = lightbox.querySelector('video');
+    if (vid) {
+      vid.pause();
+    }
     lightbox.classList.remove('active');
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
