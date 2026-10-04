@@ -651,6 +651,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 600);
   }
 
+  if (introEl) {
+    introEl.addEventListener('click', (e) => {
+      if (step4 && !step4.classList.contains('active') && !e.target.closest('#btn-open-chapter') && !e.target.closest('#btn-skip-intro')) {
+        clearTimeout(introTimeout1);
+        clearTimeout(introTimeout2);
+        clearTimeout(introTimeout3);
+        [step1, step2, step3].forEach(s => s && s.classList.remove('active'));
+        step4.classList.add('active');
+      }
+    });
+  }
+
   if (btnOpenChapter) {
     btnOpenChapter.addEventListener('click', () => {
       closeCinematicIntro();
@@ -809,7 +821,10 @@ document.addEventListener('DOMContentLoaded', () => {
       this.loadState();
 
       // Single Global Audio Instance
-      this.audio = new Audio('assets/audio/soundtrack.mp3');
+      const primaryAudioPath = 'assets/audio/soundtrack.mp3';
+      const fallbackAudioPath = 'assets/audio/NIKI - Every Summertime (Lyrics) Every year we get older.mp3';
+
+      this.audio = new Audio(primaryAudioPath);
       this.audio.loop = false;
       this.audio.preload = 'auto';
       this.audio.volume = 0; // Starts from 0 for smooth fadeIn
@@ -831,9 +846,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       this.audio.addEventListener('error', (e) => {
-        console.warn('Soundtrack notice: Audio file "assets/audio/soundtrack.mp3" not yet placed or format unsupported.', e);
-        this.isPlaying = false;
-        this.updateUI(false);
+        if (this.audio && this.audio.src && this.audio.src.indexOf('soundtrack.mp3') !== -1) {
+          this.audio.src = fallbackAudioPath;
+          this.audio.load();
+          if (this.isPlaying) {
+            this.audio.play().catch(err => console.warn(err));
+          }
+        } else {
+          console.warn('Soundtrack notice: Audio file check.', e);
+          this.isPlaying = false;
+          this.updateUI(false);
+        }
       });
 
       this.bindControls();
@@ -1007,6 +1030,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (volumeSlider) {
         volumeSlider.addEventListener('input', (e) => {
           this.setVolume(e.target.value);
+        });
+      }
+
+      const btnHeroEnter = document.getElementById('btn-hero-enter');
+      if (btnHeroEnter) {
+        btnHeroEnter.addEventListener('click', () => {
+          if (!this.isPlaying) {
+            this.play();
+          }
         });
       }
     }
