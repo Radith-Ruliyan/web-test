@@ -49,8 +49,8 @@
           We were just living them.”
         </p>
         
-        <button id="btn-open-chapter" class="btn-open-chapter" type="button">
-          <span>OPEN THE CHAPTER</span>
+        <button id="btn-open-chapter" class="btn-open-chapter" type="button" aria-label="Enter Our Story and open the first chapter">
+          <span>ENTER OUR STORY</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"></path>
             <path d="M12 5l7 7-7 7"></path>
@@ -88,13 +88,13 @@
         <a href="#letters" class="nav-link">LETTERS</a>
       </nav>
 
-      <!-- Ambient Audio Toggle -->
+      <!-- Soundtrack Audio Toggle -->
       <div class="nav-actions">
-        <button id="audio-toggle" class="audio-toggle" type="button" aria-label="Nyalakan / Matikan Musik Latar" title="Nostalgic Ambient Audio">
+        <button id="audio-toggle" class="audio-toggle" type="button" aria-label="Play / Pause Soundtrack" title="NIKI — Every Summertime">
           <span class="sound-wave">
             <span></span><span></span><span></span><span></span>
           </span>
-          <span class="audio-label">MEMORIES AMBIENCE</span>
+          <span class="audio-label">SOUNDTRACK</span>
         </button>
 
         <!-- Mobile Menu Toggle -->
@@ -583,6 +583,50 @@
       </div>
     </div>
   </div>
+
+  <!-- ================================================== -->
+  <!-- GLOBAL MUSIC CONTROLLER (NIKI — EVERY SUMMERTIME)  -->
+  <!-- ================================================== -->
+  <aside id="global-music-player" class="global-music-player" aria-label="Pemutar Musik Soundtrack">
+    <div class="music-player-card">
+      
+      <!-- Subtle Visualizer -->
+      <div class="music-visualizer" id="music-visualizer" aria-hidden="true" title="Soundtrack Visualizer">
+        <span class="vbar"></span>
+        <span class="vbar"></span>
+        <span class="vbar"></span>
+        <span class="vbar"></span>
+      </div>
+
+      <!-- Track Information -->
+      <div class="music-info">
+        <div class="music-title-wrap">
+          <span class="music-track-title">Every Summertime</span>
+          <span class="music-track-sep">&bull;</span>
+          <span class="music-artist">NIKI</span>
+        </div>
+        <span class="music-status-text" id="music-status-text">tap to play</span>
+      </div>
+
+      <!-- Play / Pause Action Button -->
+      <button id="btn-music-toggle" class="btn-music-toggle" type="button" aria-label="Play background music" title="Play / Pause soundtrack">
+        <svg class="music-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <svg class="music-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+          <rect x="6" y="4" width="4" height="16"></rect>
+          <rect x="14" y="4" width="4" height="16"></rect>
+        </svg>
+      </button>
+
+      <!-- Desktop Volume Slider -->
+      <div class="music-volume-panel" id="music-volume-panel">
+        <label for="music-volume-slider" class="sr-only">Volume Soundtrack</label>
+        <input type="range" id="music-volume-slider" min="0" max="1" step="0.05" value="0.4" aria-label="Volume Soundtrack" title="Volume">
+      </div>
+
+    </div>
+  </aside>
 
   <!-- SCRIPT -->
   <script src="script.js"></script>

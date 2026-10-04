@@ -652,10 +652,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (btnOpenChapter) {
-    btnOpenChapter.addEventListener('click', closeCinematicIntro);
+    btnOpenChapter.addEventListener('click', () => {
+      closeCinematicIntro();
+      if (!musicController.isExplicitlyDisabled()) {
+        musicController.play();
+      }
+    });
   }
   if (btnSkipIntro) {
-    btnSkipIntro.addEventListener('click', closeCinematicIntro);
+    btnSkipIntro.addEventListener('click', () => {
+      closeCinematicIntro();
+      if (!musicController.isExplicitlyDisabled()) {
+        musicController.play();
+      }
+    });
   }
   if (btnReplay) {
     btnReplay.addEventListener('click', () => {
@@ -784,109 +794,226 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     6. AMBIENT NOSTALGIA AUDIO (WEB AUDIO SYNTHESIZER)
-     Warm nostalgic chord progression without external MP3 dependencies
+     6. GLOBAL SOUNDTRACK CONTROLLER (NIKI — EVERY SUMMERTIME)
+     Single Audio Instance • Smooth Volume Fade • Persistent State
      ========================================================================== */
-  const audioToggle = document.getElementById('audio-toggle');
-  let audioCtx = null;
-  let isPlayingAudio = false;
-  let ambientGainNode = null;
-  let ambientOscillators = [];
-  let chordInterval = null;
+  const musicController = {
+    audio: null,
+    isPlaying: false,
+    volume: 0.4,
+    fadeTimer: null,
+    isInitialized: false,
 
-  // Emotional, warm chord progressions (Frequencies in Hz: Warm Dm, Bb, F, C nostalgia)
-  const chordSets = [
-    [174.61, 220.00, 261.63, 349.23], // F major (F3, A3, C4, F4)
-    [146.83, 174.61, 220.00, 293.66], // D minor (D3, F3, A3, D4)
-    [116.54, 174.61, 233.08, 349.23], // Bb major (Bb2, F3, Bb3, F4)
-    [130.81, 164.81, 196.00, 261.63]  // C major (C3, E3, G3, C4)
-  ];
+    init() {
+      if (this.isInitialized) return;
+      this.loadState();
 
-  function startAmbientNostalgia() {
-    try {
-      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-      if (!AudioContextClass) return;
+      // Single Global Audio Instance
+      this.audio = new Audio('assets/audio/soundtrack.mp3');
+      this.audio.loop = false;
+      this.audio.preload = 'auto';
+      this.audio.volume = 0; // Starts from 0 for smooth fadeIn
 
-      if (!audioCtx) {
-        audioCtx = new AudioContextClass();
-      }
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
+      // Audio Event Listeners
+      this.audio.addEventListener('play', () => {
+        this.isPlaying = true;
+        this.updateUI(true);
+      });
 
-      ambientGainNode = audioCtx.createGain();
-      ambientGainNode.gain.setValueAtTime(0.001, audioCtx.currentTime);
-      ambientGainNode.gain.exponentialRampToValueAtTime(0.08, audioCtx.currentTime + 3);
-      ambientGainNode.connect(audioCtx.destination);
+      this.audio.addEventListener('pause', () => {
+        this.isPlaying = false;
+        this.updateUI(false);
+      });
 
-      let currentChordIdx = 0;
+      this.audio.addEventListener('ended', () => {
+        this.isPlaying = false;
+        this.updateUI(false, true); // Ended state (never loops, never restarts)
+      });
 
-      function playChord(chord) {
-        // Fade out previous oscillators
-        ambientOscillators.forEach(osc => {
-          try {
-            osc.stop(audioCtx.currentTime + 1.5);
-          } catch(e) {}
-        });
-        ambientOscillators = [];
+      this.audio.addEventListener('error', (e) => {
+        console.warn('Soundtrack notice: Audio file "assets/audio/soundtrack.mp3" not yet placed or format unsupported.', e);
+        this.isPlaying = false;
+        this.updateUI(false);
+      });
 
-        chord.forEach(freq => {
-          const osc = audioCtx.createOscillator();
-          const noteGain = audioCtx.createGain();
+      this.bindControls();
+      this.isInitialized = true;
+    },
 
-          osc.type = 'sine';
-          osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+    play() {
+      if (!this.audio) this.init();
+      if (!this.audio) return;
 
-          // Subtle slow vibrato for tape/yearbook nostalgia
-          noteGain.gain.setValueAtTime(0.001, audioCtx.currentTime);
-          noteGain.gain.linearRampToValueAtTime(0.03, audioCtx.currentTime + 1.2);
-
-          osc.connect(noteGain);
-          noteGain.connect(ambientGainNode);
-
-          osc.start();
-          ambientOscillators.push(osc);
-        });
+      if (this.audio.ended) {
+        this.audio.currentTime = 0;
       }
 
-      playChord(chordSets[0]);
+      const playPromise = this.audio.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            this.fadeIn(this.volume, 600);
+            this.saveState(true);
+          })
+          .catch(err => {
+            console.warn('Autoplay prevented by browser or waiting for user interaction:', err);
+            this.updateUI(false);
+          });
+      }
+    },
 
-      chordInterval = setInterval(() => {
-        currentChordIdx = (currentChordIdx + 1) % chordSets.length;
-        playChord(chordSets[currentChordIdx]);
-      }, 5500);
+    pause() {
+      if (!this.audio) return;
+      this.fadeOut(400, () => {
+        this.audio.pause();
+        this.saveState(false);
+      });
+    },
 
-      isPlayingAudio = true;
-      audioToggle.classList.add('playing');
-    } catch (err) {
-      console.warn('Web Audio ambience notice:', err);
-    }
-  }
-
-  function stopAmbientNostalgia() {
-    if (chordInterval) clearInterval(chordInterval);
-    if (ambientGainNode && audioCtx) {
-      ambientGainNode.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1);
-      setTimeout(() => {
-        ambientOscillators.forEach(osc => {
-          try { osc.stop(); } catch(e) {}
-        });
-        ambientOscillators = [];
-      }, 1100);
-    }
-    isPlayingAudio = false;
-    audioToggle.classList.remove('playing');
-  }
-
-  if (audioToggle) {
-    audioToggle.addEventListener('click', () => {
-      if (!isPlayingAudio) {
-        startAmbientNostalgia();
+    toggle() {
+      if (!this.audio) this.init();
+      if (this.isPlaying) {
+        this.pause();
       } else {
-        stopAmbientNostalgia();
+        this.play();
       }
-    });
-  }
+    },
+
+    fadeIn(targetVolume = this.volume, duration = 600) {
+      if (!this.audio) return;
+      clearInterval(this.fadeTimer);
+      const startVolume = this.audio.volume;
+      const startTime = performance.now();
+
+      this.fadeTimer = setInterval(() => {
+        const elapsed = performance.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const newVol = startVolume + (targetVolume - startVolume) * progress;
+        this.audio.volume = Math.max(0, Math.min(1, newVol));
+
+        if (progress >= 1) {
+          clearInterval(this.fadeTimer);
+          this.audio.volume = targetVolume;
+        }
+      }, 25);
+    },
+
+    fadeOut(duration = 400, onComplete) {
+      if (!this.audio) {
+        if (onComplete) onComplete();
+        return;
+      }
+      clearInterval(this.fadeTimer);
+      const startVolume = this.audio.volume;
+      const startTime = performance.now();
+
+      this.fadeTimer = setInterval(() => {
+        const elapsed = performance.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const newVol = startVolume * (1 - progress);
+        this.audio.volume = Math.max(0, Math.min(1, newVol));
+
+        if (progress >= 1) {
+          clearInterval(this.fadeTimer);
+          this.audio.volume = 0;
+          if (onComplete) onComplete();
+        }
+      }, 25);
+    },
+
+    setVolume(val) {
+      this.volume = Math.max(0, Math.min(1, parseFloat(val)));
+      if (this.audio && this.isPlaying) {
+        this.audio.volume = this.volume;
+      }
+      localStorage.setItem('1ka19_music_volume', this.volume);
+    },
+
+    saveState(enabled) {
+      localStorage.setItem('1ka19_music_enabled', enabled ? 'true' : 'false');
+    },
+
+    loadState() {
+      const savedVolume = localStorage.getItem('1ka19_music_volume');
+      if (savedVolume !== null && !isNaN(parseFloat(savedVolume))) {
+        this.volume = parseFloat(savedVolume);
+      }
+      const slider = document.getElementById('music-volume-slider');
+      if (slider) {
+        slider.value = this.volume;
+      }
+    },
+
+    isExplicitlyDisabled() {
+      return localStorage.getItem('1ka19_music_enabled') === 'false';
+    },
+
+    updateUI(playing, hasEnded = false) {
+      const visualizer = document.getElementById('music-visualizer');
+      const btnToggle = document.getElementById('btn-music-toggle');
+      const statusText = document.getElementById('music-status-text');
+      const navAudioToggle = document.getElementById('audio-toggle');
+
+      if (visualizer) {
+        visualizer.classList.toggle('playing', playing);
+      }
+
+      if (btnToggle) {
+        const iconPlay = btnToggle.querySelector('.music-icon-play');
+        const iconPause = btnToggle.querySelector('.music-icon-pause');
+        if (iconPlay && iconPause) {
+          iconPlay.style.display = playing ? 'none' : 'block';
+          iconPause.style.display = playing ? 'block' : 'none';
+        }
+        btnToggle.setAttribute('aria-label', playing ? 'Pause background music' : 'Play background music');
+        btnToggle.setAttribute('title', playing ? 'Pause soundtrack' : 'Play soundtrack');
+      }
+
+      if (statusText) {
+        if (hasEnded) {
+          statusText.textContent = 'the soundtrack has ended';
+        } else if (playing) {
+          statusText.textContent = 'playing soundtrack';
+        } else {
+          statusText.textContent = 'paused';
+        }
+      }
+
+      if (navAudioToggle) {
+        navAudioToggle.classList.toggle('playing', playing);
+        navAudioToggle.setAttribute('aria-label', playing ? 'Pause soundtrack' : 'Play soundtrack');
+      }
+    },
+
+    bindControls() {
+      const btnToggle = document.getElementById('btn-music-toggle');
+      const navAudioToggle = document.getElementById('audio-toggle');
+      const volumeSlider = document.getElementById('music-volume-slider');
+
+      if (btnToggle) {
+        btnToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.toggle();
+        });
+      }
+
+      if (navAudioToggle) {
+        navAudioToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.toggle();
+        });
+      }
+
+      if (volumeSlider) {
+        volumeSlider.addEventListener('input', (e) => {
+          this.setVolume(e.target.value);
+        });
+      }
+    }
+  };
+
+  // Initialize global music controller instance
+  musicController.init();
 
 
   /* ==========================================================================

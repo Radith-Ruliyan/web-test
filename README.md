@@ -16,7 +16,7 @@ Dengan perpaduan estetika editorial majalah, sentuhan scrapbook hangat, palet wa
 
 1. **Cinematic Opening / Intro**:
    - Transisi layar gelap: *Universitas Gunadarma Karawaci* &rarr; *2026* &rarr; *1KA19 The First Chapter* &rarr; Quote reflektif.
-   - Tombol **"OPEN THE CHAPTER"** dengan efek tirai membuka lembaran baru.
+   - Tombol **"ENTER OUR STORY"** dengan efek tirai membuka lembaran baru sekaligus memicu pemutaran soundtrack utama secara resmi.
    - Tombol *Skip Intro* dan *Replay Our Story* di bagian akhir.
 2. **Hero Class Photo Placeholder**:
    - Frame foto kelas berukuran besar bergaya sinematik dengan rasio 21:9, badge, dan aksen sudut minimalis siap disematkan foto asli kelas 1KA19.
@@ -45,8 +45,10 @@ Dengan perpaduan estetika editorial majalah, sentuhan scrapbook hangat, palet wa
     - Bagian berlatar hitam pekat dengan ritme scroll tipografi emosional.
 13. **Final Chapter & "We Were Here"**:
     - Epilog penutup yang menggetarkan hati dengan cap kelulusan/angkatan dan tombol **Replay Our Story**.
-14. **Ambient Memories Audio**:
-    - Generator melodi nostalgia lembut menggunakan *Web Audio API* (tidak butuh file eksternal tambahan, langsung berbunyi lembut saat tombol "MEMORIES AMBIENCE" di-klik).
+14. **Global Soundtrack Player (NIKI — Every Summertime)**:
+    - Satu audio instance global yang berjalan konsisten dari awal hingga akhir tanpa restart saat berpindah section, scroll, maupun buka/tutup modal.
+    - Lokasi file: `assets/audio/soundtrack.mp3`
+    - Visualizer halus 4 bar, play/pause switch, desktop volume slider, smooth fade in/out, dan status "the soundtrack has ended" saat lagu selesai.
 
 ---
 

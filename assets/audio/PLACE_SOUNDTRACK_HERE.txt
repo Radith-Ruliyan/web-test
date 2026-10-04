@@ -1,0 +1,9 @@
+Letakkan file audio Anda di folder ini dengan nama:
+soundtrack.mp3
+
+Path lengkap:
+assets/audio/soundtrack.mp3
+
+Lagu: NIKI — Every Summertime
+
+Website secara otomatis memutar file ini dari awal saat pengunjung menekan tombol "ENTER OUR STORY".
