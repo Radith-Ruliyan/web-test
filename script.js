@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: "03",
       name: "MUHAMMAD YARIS",
       nickname: "Yaris",
-      role: "PJ MATA KULIAH ALGORITMA & PEMROGRAM 1B",
+      role: "PJ MATA KULIAH ALGORITMA & PEMROGRAMAN 1B",
       quote: "ISI QUOTE DISINI",
       funFact: "CIRI KHAS",
       image: "assets/Photo/"
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: "04",
       name: "HYUGA PUTRA APRIANTO",
       nickname: "Hyuga",
-      role: "Boss Muda",
+      role: "BOSS Muda",
       quote: "ISI QUOTE DISINI",
       funFact: "CIRI KHAS",
       image: "assets/Photo/"
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: "05",
       name: "RADITH RULIYAN",
       nickname: "Radith",
-      role: "PJ MATA KULIAH MATEMATIKA 1A",
+      role: "PJ MATA KULIAH MATEMATIKA DASAR 1A",
       quote: "ISI QUOTE DISINI",
       funFact: "CIRI KHAS",
       image: "assets/Photo/"
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: "06",
       name: "REHAN CHANDRA WINATA",
       nickname: "Rehan",
-      role: "PJ MATA KULIAH KS TSI B",
+      role: "PJ MATA KULIAH KONSEP SISTEM & TEKNIK SISTEM INFORMASI B",
       quote: "ISI QUOTE DISINI",
       funFact: "CIRI KHAS",
       image: "assets/Photo/"
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: "08",
       name: "ARVIN HOBART PASARIBU",
       nickname: "Arvin",
-      role: "PJ MATA KULIAH BISNIS & EKONOMI D",
+      role: "PJ MATA KULIAH BISNIS & EKONOMI DIGITAL",
       quote: "ISI QUOTE DISINI",
       funFact: "CIRI KHAS",
       image: "assets/Photo/"
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: "14",
       name: "KEVIN AUFA NABIL",
       nickname: "Kevin",
-      role: "PJ MATA KULIAH MATA KULIAH ALGORITMA & PEMROGRAMAN 1C",
+      role: "ISI ROLE DISINI",
       quote: "ISI QUOTE DISINI",
       funFact: "CIRI KHAS",
       image: "assets/Photo/"
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: "18",
       name: "NISA ZAKIYATUNNUFUS",
       nickname: "Nufus",
-      role: "ISI ROLE DISINI",
+      role: "PJ MATA KULIAH PENDIDIKAN PANCASILA",
       quote: "ISI QUOTE DISINI",
       funFact: "CIRI KHAS",
       image: "assets/Photo/"
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: "19",
       name: "AULIA ERLIANA",
       nickname: "Liana",
-      role: "ISI ROLE DISINI",
+      role: "PJ MATA KULIAH MATEMATIKA DASAR 1B",
       quote: "ISI QUOTE DISINI",
       funFact: "CIRI KHAS",
       image: "assets/Photo/"
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: "21",
       name: "AQILA NURKHOLISA",
       nickname: "Aqila",
-      role: "ISI ROLE DISINI",
+      role: "PJ MATA KULIAH KONSEP SISTEM & TEKNIK SISTEM INFORMASI C",
       quote: "ISI QUOTE DISINI",
       funFact: "CIRI KHAS",
       image: "assets/Photo/"
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: "23",
       name: "GLADIES ZAHWA ALFIANI",
       nickname: "Gladies",
-      role: "ISI ROLE DISINI",
+      role: "PJ MATA KULIAH KONSEP SISTEM & TEKNIK SISTEM INFORMASI A",
       quote: "ISI QUOTE DISINI",
       funFact: "CIRI KHAS",
       image: "assets/Photo/"
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: "26",
       name: "SOFIE TATA MIRANTHY",
       nickname: "Sofie",
-      role: "ISI ROLE DISINI",
+      role: "PJ MATA KULIAH ILMU SOSIAL & BUDAYA DASAR",
       quote: "ISI QUOTE DISINI",
       funFact: "CIRI KHAS",
       image: "assets/Photo/"
@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   const timelineData = [
     {
-      date: "23 SEP 2026",
+      date: "28 SEP 2026",
       kicker: "THE BEGINNING",
       title: "First Day as College Students",
       desc: "Hari pertama menginjakkan kaki di gedung kampus Gunadarma Karawaci. Masih mencari ruangan, masih canggung saling sapa, dan belum tahu siapa yang akan jadi teman tertawa sepanjang semester.",
@@ -268,10 +268,20 @@ document.addEventListener('DOMContentLoaded', () => {
       image: "assets/Photo/FIRST%20DAY.jpeg"
     },
     {
-      date: "OKT 2026",
+      date: "SEP 2026",
+      kicker: "SOLIDARITY",
+      title: "Barisan Laki-Laki & Class Presentation",
+      desc: "Formasi kompak para mahasiswa 1KA19. Sistem kerja kebut yang dikerjain hingga menit-menit akhir dan solidaritas barisan yang saling menyemangati di depan kelas.",
+      location: "Podium Kelas 1KA19",
+      tag: "THE BOYS",
+      aspect: "aspect-portrait",
+      image: "assets/Photo/BARISAN%20LAKI%20LAKI%201KA19.jpeg"
+    },
+    {
+      date: "SEP 2026",
       kicker: "ACADEMIC LIFE",
       title: "The First Lecture & Confusions",
-      desc: "Materi algoritma dan sistem informasi pertama kali dibuka. Sesi foto bareng di ruang kelas setelah jam kuliah selesai dengan muka-muka penuh semangat baru.",
+      desc: "Materi algoritma dan teknik informasi pertama kali dibuka. Sesi foto bareng di ruang kelas setelah jam kuliah selesai dengan muka-muka penuh semangat baru.",
       location: "Ruang Kelas 1KA19",
       tag: "FOTBAR KELAS",
       aspect: "aspect-landscape",
@@ -281,27 +291,17 @@ document.addEventListener('DOMContentLoaded', () => {
       date: "NOV 2026",
       kicker: "THE BATTLE & FEAST",
       title: "Group Assignment & Makan Bareng",
-      desc: "Kerja kelompok pertama. Pembagian tugas di grup chat, janji kumpul jam 1 baru lengkap jam 3, dan diakhiri sesi makan bareng hangat yang lebih lama dari ngerjain tugasnya.",
-      location: "Kantin & Selasar Kampus",
+      desc: "Kerja kelompok pertama. Pembagian tugas di grup chat, janji kumpul makan buah, dan sesi makan bareng hangat yang lebih lama dari ngerjain tugasnya.",
+      location: "Lorong Kampus",
       tag: "MAKAN BARENG",
       aspect: "aspect-tall",
       image: "assets/Photo/MAKAN%20BARENG.jpeg"
     },
     {
-      date: "DES 2026",
-      kicker: "SOLIDARITY",
-      title: "Barisan Laki-Laki & Class Presentation",
-      desc: "Formasi kompak para mahasiswa 1KA19. Slide presentasi yang diedit hingga menit-menit akhir dan solidaritas barisan yang saling menyemangati di depan kelas.",
-      location: "Podium Kelas 1KA19",
-      tag: "THE BOYS",
-      aspect: "aspect-portrait",
-      image: "assets/Photo/BARISAN%20LAKI%20LAKI%201KA19.jpeg"
-    },
-    {
-      date: "2026 — 2027",
+      date: "OKT 2026",
       kicker: "INTIMACY",
       title: "Late-Night Hangouts & Mall SMS Trip",
-      desc: "Saat obrolan bukan lagi seputar tugas kuliah, melainkan jalan-jalan santai melepas penat ke Mall SMS Karawaci sambil menunggu macet mereda.",
+      desc: "Saat obrolan bukan lagi seputar tugas kuliah, melainkan cerita-cerita pribadi yang saling dibagikan suka dan duka yang ikut saling diceritakan.",
       location: "Summarecon Mall Serpong & Karawaci",
       tag: "MALL SMS",
       aspect: "aspect-landscape",
@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "pw-3",
       image: "assets/Photo/FOTBAR%20KELAS.jpeg",
-      title: "Fotbar di Ruang Kelas",
+      title: "Foto di Lorong Kelas",
       desc: "Foto bersama seluruh kawan kelas setelah usai jam mata kuliah di kampus Karawaci.",
       tag: "IN CLASS",
       category: "class",
@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "pw-5",
       image: "assets/Photo/CLASS%20ROASTER%20AZHAR.jpeg",
-      title: "Class Roster — Azhar",
+      title: "Azhar gemoy",
       desc: "Potret resmi roster 1KA19: Azhar, mahasiswa Sistem Informasi Karawaci.",
       tag: "ROSTER",
       category: "class",
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "pw-6",
       image: "assets/Photo/AZHAREKSIS.jpeg",
-      title: "Azhar Eksis di Kelas",
+      title: "Azhar melet",
       desc: "Pose penuh senyum dan rasa percaya diri Azhar yang selalu menghidupkan suasana kelas.",
       tag: "CANDID",
       category: "chaos",
@@ -394,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "pw-7",
       image: "assets/Photo/KETUA.jpeg",
-      title: "Pak Ketua Kelas 1KA19",
+      title: "PETINGGI KELAS 1KA19",
       desc: "Sudut pandang percaya diri sang ketua bersama rekan-rekan seperjuangan 1KA19.",
       tag: "LEADERSHIP",
       category: "class",
@@ -430,7 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "pw-10",
       image: "assets/Photo/CECAN.jpeg",
-      title: "Cecan 1KA19 (Circle 1)",
+      title: "BIDADARI 1KA19",
       desc: "Senyuman manis mahasiswi 1KA19 yang selalu mencerahkan suasana kelas.",
       tag: "THE GIRLS",
       category: "hangout",
@@ -442,7 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "pw-11",
       image: "assets/Photo/CECAN2.jpeg",
-      title: "Cecan 1KA19 (Circle 2)",
+      title: "BIDADARI 1KA19 2",
       desc: "Momen kebersamaan dan keceriaan srikandi 1KA19 di selasar kampus Karawaci.",
       tag: "THE GIRLS",
       category: "hangout",
@@ -454,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "pw-12",
       image: "assets/Photo/CECAN3.jpeg",
-      title: "Cecan 1KA19 (Circle 3)",
+      title: "BIDADARI 1KA19 3",
       desc: "Obrolan santai dan tawa ceria para mahasiswi di sela pergantian mata kuliah.",
       tag: "THE GIRLS",
       category: "hangout",
@@ -466,7 +466,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "pw-13",
       image: "assets/Photo/CECAN4.jpeg",
-      title: "Cecan 1KA19 (Circle 4)",
+      title: "BIDADARI 1KA19 4",
       desc: "Pose candid manis mahasiswi 1KA19 yang terekam abadi di kapsul waktu ini.",
       tag: "THE GIRLS",
       category: "hangout",
@@ -478,7 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "pw-14",
       image: "assets/Photo/MAKAN%20BARENG.jpeg",
-      title: "Makan Bareng Sepulang Kuliah",
+      title: "Makan Bareng",
       desc: "Meja kantin yang disatukan panjang, obrolan ngalor-ngidul, dan kenikmatan makan bersama.",
       tag: "MAKAN BARENG",
       category: "hangout",
@@ -490,7 +490,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "pw-15",
       image: "assets/Photo/MALL%20SMS.jpeg",
-      title: "Nongkrong di Summarecon Mall Serpong",
+      title: "Summarecon Mall Serpong",
       desc: "Healing seru melepas penat tugas kuliah di SMS Karawaci bareng kawan sekelas.",
       tag: "MALL SMS",
       category: "hangout",
@@ -526,7 +526,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "pw-18",
       image: "assets/Photo/FOTO%20LUCU.jpeg",
-      title: "Foto Lucu 1KA19 (Part 1)",
+      title: "Foto Lucu 1KA19 1",
       desc: "Kelakuan random anak 1KA19 yang bikin seisi kelas nggak bisa menahan tawa.",
       tag: "INSIDE CHAOS",
       category: "chaos",
@@ -538,7 +538,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: "pw-19",
       image: "assets/Photo/FOTO%20LUCU2.jpeg",
-      title: "Foto Lucu 1KA19 (Part 2)",
+      title: "Azhar ngantuk",
       desc: "Tingkah absurd spontan kawan sekelas yang menjadi memori paling menghibur.",
       tag: "INSIDE CHAOS",
       category: "chaos",
