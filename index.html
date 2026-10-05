@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=20261004.8">
+  <link rel="stylesheet" href="style.css?v=20261005.1">
 </head>
 <body class="intro-active">
 
@@ -26,6 +26,14 @@
   <!-- 3. OPENING / CINEMATIC INTRO                      -->
   <!-- ================================================== -->
   <aside id="cinematic-intro" class="cinematic-intro" aria-label="Intro Sinematik 1KA19">
+    <!-- GEDUNG KAMPUS GUNADARMA BACKDROP -->
+    <div class="intro-campus-backdrop" id="intro-campus-backdrop" aria-hidden="true">
+      <img src="assets/Photo/KAMPUS%20GUNADARMA.webp" alt="Gedung Kampus Gunadarma Karawaci" class="intro-campus-img" id="intro-campus-img">
+      <div class="intro-campus-overlay"></div>
+      <div class="intro-campus-vignette"></div>
+      <div class="intro-campus-flash" id="intro-campus-flash"></div>
+    </div>
+
     <div class="intro-bg-glow"></div>
     <div class="intro-container">
       
@@ -296,22 +304,46 @@
 
         <!-- Filter / Tabs & Tempel Foto Button -->
         <div class="moments-controls reveal-fade">
-          <div class="moments-filter" role="tablist">
-            <button class="filter-btn active" data-filter="all">SEMUA FOTO</button>
-            <button class="filter-btn" data-filter="class">DI KELAS</button>
-            <button class="filter-btn" data-filter="hangout">NONGKRONG</button>
-            <button class="filter-btn" data-filter="chaos">CANDID</button>
+          <div class="moments-filter-group">
+            <div class="moments-filter" role="tablist">
+              <button class="filter-btn active" data-filter="all">SEMUA FOTO</button>
+              <button class="filter-btn" data-filter="class">DI KELAS</button>
+              <button class="filter-btn" data-filter="hangout">NONGKRONG</button>
+              <button class="filter-btn" data-filter="chaos">CANDID</button>
+            </div>
           </div>
 
-          <div class="moments-upload-wrap">
-            <input type="file" id="photo-wall-upload" accept="image/*" multiple class="sr-only">
-            <label for="photo-wall-upload" class="btn-add-photos" title="Tempel foto langsung dari HP / Laptop Anda">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-              <span>TEMPEL FOTO (+UPLOAD)</span>
-            </label>
+          <div class="moments-actions">
+            <!-- Mobile View Switcher: Grid (2 Col) vs Feed (1 Col) -->
+            <div class="moments-view-toggle" id="moments-view-toggle" role="group" aria-label="Pilih Tampilan Galeri">
+              <button type="button" class="view-toggle-btn active" data-view="grid" title="Tampilan Grid (2 Kolom di HP)" aria-label="Tampilan Grid">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                <span>GRID</span>
+              </button>
+              <button type="button" class="view-toggle-btn" data-view="feed" title="Tampilan Feed (1 Kolom Besar di HP)" aria-label="Tampilan Feed">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <rect x="3" y="4" width="18" height="7" rx="1"></rect>
+                  <rect x="3" y="13" width="18" height="7" rx="1"></rect>
+                </svg>
+                <span>FEED</span>
+              </button>
+            </div>
+
+            <div class="moments-upload-wrap">
+              <input type="file" id="photo-wall-upload" accept="image/*" multiple class="sr-only">
+              <label for="photo-wall-upload" class="btn-add-photos" title="Tempel foto langsung dari HP / Laptop Anda">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <span>TEMPEL FOTO</span>
+              </label>
+            </div>
           </div>
         </div>
 
@@ -638,6 +670,6 @@
   </aside>
 
   <!-- SCRIPT -->
-  <script src="script.js?v=20261004.8"></script>
+  <script src="script.js?v=20261005.1"></script>
 </body>
 </html>

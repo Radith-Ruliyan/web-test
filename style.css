@@ -223,6 +223,96 @@ button {
   pointer-events: none;
 }
 
+/* ==========================================================================
+   GEDUNG KAMPUS GUNADARMA BACKDROP & 3D PORTAL DIVE
+   ========================================================================== */
+.intro-campus-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.intro-campus-img {
+  position: absolute;
+  inset: -6%;
+  width: 112%;
+  height: 112%;
+  object-fit: cover;
+  object-position: center 36%;
+  transform: scale(1.05);
+  filter: brightness(0.52) contrast(1.15) saturate(1.12);
+  transition: transform 1.25s cubic-bezier(0.16, 1, 0.3, 1), filter 1.25s ease;
+  animation: campusKenBurns 25s ease-in-out infinite alternate;
+  will-change: transform, filter;
+}
+
+@keyframes campusKenBurns {
+  0% {
+    transform: scale(1.04) translate(0%, 0%);
+  }
+  50% {
+    transform: scale(1.12) translate(-1.2%, -0.8%);
+  }
+  100% {
+    transform: scale(1.08) translate(1%, -1.4%);
+  }
+}
+
+.intro-campus-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 45%, rgba(145, 27, 98, 0.52) 0%, rgba(45, 15, 46, 0.76) 55%, rgba(15, 6, 15, 0.94) 100%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.intro-campus-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, transparent 22%, rgba(10, 4, 10, 0.86) 100%);
+  pointer-events: none;
+}
+
+.intro-campus-flash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 248, 230, 0.98) 0%, rgba(201, 154, 74, 0.75) 35%, rgba(145, 27, 98, 0.6) 65%, rgba(15, 6, 15, 0.95) 100%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 6;
+  transition: opacity 0.5s ease-out;
+}
+
+/* 3D PORTAL DIVE / ZOOM-THROUGH TRANSITION ON CLICK */
+.cinematic-intro.portal-dive .intro-campus-img {
+  animation: none !important;
+  transform: scale(3.5) translate(0%, -2%) translateZ(0) !important;
+  filter: brightness(2.2) contrast(1.25) saturate(1.4) !important;
+  transition: transform 1.25s cubic-bezier(0.22, 1, 0.36, 1), filter 0.85s ease !important;
+}
+
+.cinematic-intro.portal-dive .intro-campus-flash {
+  opacity: 0.95;
+  transition: opacity 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.cinematic-intro.portal-dive .intro-container {
+  transform: scale(1.3) translateY(-35px);
+  opacity: 0;
+  filter: blur(8px);
+  transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease, filter 0.5s ease;
+}
+
+.cinematic-intro.portal-dive .intro-bg-glow {
+  transform: scale(2.6);
+  opacity: 0;
+  transition: transform 1s ease, opacity 0.8s ease;
+}
+
 .intro-bg-glow {
   position: absolute;
   width: 80vw;
@@ -232,6 +322,8 @@ button {
   background: radial-gradient(circle, rgba(145, 27, 98, 0.35) 0%, rgba(75, 22, 76, 0.12) 50%, transparent 75%);
   filter: blur(40px);
   pointer-events: none;
+  z-index: 2;
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .intro-container {
@@ -241,6 +333,7 @@ button {
   width: 100%;
   max-width: 720px;
   margin-block: auto;
+  transition: transform 0.6s var(--ease-cinematic), opacity 0.6s var(--ease-cinematic), filter 0.6s ease;
 }
 
 .intro-step {
@@ -918,14 +1011,14 @@ button {
 .hero-placeholder img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
   object-position: center center !important;
-  background: #191118 !important;
+  background: #F4EFEA !important;
 }
 
 .roster-thumb-wrap .memory-placeholder {
   aspect-ratio: 3 / 4 !important;
-  background: #1a1218 !important;
+  background: #F4EFEA !important;
   border-radius: 4px;
   overflow: hidden;
   position: relative;
@@ -934,16 +1027,21 @@ button {
 .roster-thumb-wrap .memory-placeholder img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
-  object-position: center center !important;
-  background: #1a1218 !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+  background: transparent !important;
   position: absolute;
   inset: 0;
+  transition: transform 0.45s var(--ease-cinematic);
+}
+
+.roster-card:hover .roster-thumb-wrap .memory-placeholder img {
+  transform: scale(1.05);
 }
 
 .people-card .memory-placeholder {
   aspect-ratio: 3 / 4 !important;
-  background: #1a1218 !important;
+  background: #F4EFEA !important;
   border-radius: 4px;
   overflow: hidden;
   position: relative;
@@ -952,11 +1050,16 @@ button {
 .people-card .memory-placeholder img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
-  object-position: center center !important;
-  background: #1a1218 !important;
+  object-fit: cover !important;
+  object-position: center 22% !important;
+  background: transparent !important;
   position: absolute;
   inset: 0;
+  transition: transform 0.45s var(--ease-cinematic);
+}
+
+.people-card:hover .memory-placeholder img {
+  transform: scale(1.05);
 }
 
 
@@ -1307,7 +1410,7 @@ button {
 }
 
 .timeline-image-holder .memory-placeholder {
-  background: #191118 !important;
+  background: #F4EFEA !important;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 12px 32px rgba(39, 28, 37, 0.12);
@@ -1336,9 +1439,10 @@ button {
   inset: 0;
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
   object-position: center center !important;
-  background: #191118 !important;
+  background: transparent !important;
+  transition: transform 0.45s var(--ease-cinematic);
 }
 
 .timeline-meta-bar {
@@ -1413,7 +1517,14 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(1.8rem, 3.5vw, 2.8rem);
+}
+
+.moments-filter-group {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .moments-filter {
@@ -1426,6 +1537,48 @@ button {
 }
 .moments-filter::-webkit-scrollbar {
   display: none;
+}
+
+.moments-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+/* Mobile View Switcher (Grid 2 Kolom vs Feed 1 Kolom) */
+.moments-view-toggle {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  padding: 3px;
+  box-shadow: 0 2px 8px rgba(39, 28, 37, 0.04);
+}
+
+.view-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 34px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.view-toggle-btn.active {
+  background-color: var(--purple);
+  color: #FFFFFF;
+  box-shadow: 0 2px 10px rgba(145, 27, 98, 0.25);
 }
 
 .btn-add-photos {
@@ -1462,6 +1615,7 @@ button {
   gap: 1.8rem 0.85rem;
   padding-top: 1rem;
   padding-bottom: 1.5rem;
+  transition: all 0.35s ease;
 }
 
 @media (min-width: 640px) {
@@ -1475,6 +1629,28 @@ button {
   .photo-wall-board, .moments-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 2.8rem 1.8rem;
+  }
+}
+
+/* Mobile Feed Mode (1 Kolom Besar) */
+@media (max-width: 767px) {
+  .photo-wall-board.feed-mode {
+    grid-template-columns: 1fr !important;
+    max-width: 440px;
+    margin-inline: auto;
+    gap: 2.2rem !important;
+  }
+  .photo-wall-board.feed-mode .polaroid-pin-card {
+    transform: none !important;
+    margin-top: 0 !important;
+    padding: 12px 12px 22px 12px;
+  }
+  .photo-wall-board.feed-mode .polaroid-media {
+    aspect-ratio: 4 / 3 !important;
+  }
+  .photo-wall-board.feed-mode .polaroid-title {
+    font-size: 1.15rem;
+    white-space: normal;
   }
 }
 
@@ -1525,10 +1701,25 @@ button {
   transition: transform 0.12s ease;
 }
 
-/* Mobile Staggered Rhythm (Odd/Even Stagger) */
+/* Mobile Performance & Smooth Scroll (Stagger & Tamed Tilts) */
 @media (max-width: 767px) {
-  .photo-wall-board .polaroid-pin-card:nth-child(even) {
-    margin-top: 1.2rem;
+  .polaroid-pin-card {
+    animation: none !important; /* Eliminate constant repaint on mobile */
+    will-change: transform;
+  }
+  .polaroid-pin-card.tilt-1 { --rot: -0.8deg; transform: rotate(-0.8deg); }
+  .polaroid-pin-card.tilt-2 { --rot: 0.8deg; transform: rotate(0.8deg); }
+  .polaroid-pin-card.tilt-3 { --rot: -0.6deg; transform: rotate(-0.6deg); }
+  .polaroid-pin-card.tilt-4 { --rot: 0.9deg; transform: rotate(0.9deg); }
+  .polaroid-pin-card.tilt-5 { --rot: -0.8deg; transform: rotate(-0.8deg); }
+  .polaroid-pin-card.tilt-6 { --rot: 0.7deg; transform: rotate(0.7deg); }
+
+  .photo-wall-board:not(.feed-mode) .polaroid-pin-card:nth-child(even) {
+    margin-top: 1rem;
+  }
+
+  .polaroid-pin-card:hover, .polaroid-pin-card:focus-visible {
+    transform: translateY(-4px) scale(1.01) rotate(0deg) !important;
   }
 }
 
@@ -1588,7 +1779,7 @@ button {
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: #191118;
+  background: #EFE8DF;
   border-radius: 2px;
   border: 1px solid rgba(221, 213, 204, 0.5);
   display: flex;
@@ -1609,8 +1800,9 @@ button {
 .polaroid-media video {
   width: 100%;
   height: 100%;
-  object-fit: contain !important;
-  background: #191118;
+  object-fit: cover !important;
+  object-position: center center;
+  background: #EFE8DF;
   display: block;
   transition: transform 0.5s var(--ease-cinematic);
 }

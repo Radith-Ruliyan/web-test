@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const classMembers = [
     {
       id: "01",
-      name: "Azhar",
+      name: "AZHAR WIDIA RAHMAN",
       nickname: "BOSS Azhar",
       role: "Ketua Kelas",
-      quote: "Menjalani setiap momen di 1KA19 dengan penuh tawa dan cerita.",
-      funFact: "Fun fact: Sosok ikonik yang selalu membawa suasana seru dan komedi di kelas.",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
       image: "assets/Photo/CLASS%20ROASTER%20AZHAR.jpeg"
     },
     {
@@ -29,17 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "AHMAD RIZA",
       nickname: "RIZA",
       role: "Wakil Ketua Kelas",
-      quote: "Memimpin 1KA19 dengan penuh kebanggaan, tanggung jawab, dan tawa.",
-      funFact: "Garda terdepan info dosen & komando solid kelas.",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
       image: "assets/Photo/"
     },
     {
       id: "03",
-      name: "Muhammad Yaris",
+      name: "MUHAMMAD YARIS",
       nickname: "Yaris",
       role: "PJ MATA KULIAH ALGORITMA & PEMROGRAM 1B",
-      quote: "Karisma tetap menyala di setiap sudut lorong kampus Karawaci.",
-      funFact: "Fun fact: Selalu tampil rapi dan estetik di setiap jepretan kamera.",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
       image: "assets/Photo/"
     },
     {
@@ -47,17 +47,17 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "HYUGA PUTRA APRIANTO",
       nickname: "Hyuga",
       role: "Boss Muda",
-      quote: "Dua raga, satu frekuensi kebersamaan tak terpisahkan di 1KA19.",
-      funFact: "Fun fact: Selalu kompak jalan bareng dari selasar sampai ruang kelas.",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
       image: "assets/Photo/"
     },
     {
       id: "05",
-      name: "Radith Ruliyan",
+      name: "RADITH RULIYAN",
       nickname: "Radith",
       role: "PJ MATA KULIAH MATEMATIKA 1A",
-      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
-      funFact: "Fun fact: Mood maker yang selalu bikin suasana kelas cair dan ceria.",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
       image: "assets/Photo/"
     },
     {
@@ -65,17 +65,17 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "REHAN CHANDRA WINATA",
       nickname: "Rehan",
       role: "PJ MATA KULIAH KS TSI B",
-      quote: "Penyemangat dan pemberi warna cerah di setiap hari perkuliahan.",
-      funFact: "Fun fact: Sudut kelas paling rapi dengan catatan materi terlengkap.",
-      image: "assets/Photo/CECAN.jpeg"
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
+      image: "assets/Photo/"
     },
     {
       id: "07",
       name: "MUHAMMAD HAFIDZ NASUTION",
       nickname: "Hafidz",
       role: "Bendahara Kelas",
-      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
-      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
       image: "assets/Photo/"
     },
     {
@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "ARVIN HOBART PASARIBU",
       nickname: "Arvin",
       role: "PJ MATA KULIAH BISNIS & EKONOMI D",
-      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
-      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
       image: "assets/Photo/"
     },
     {
@@ -92,8 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "PASKALIS BAMA YUDANTO",
       nickname: "Bama",
       role: "PJ MATA KULIAH ALGORITMA & PEMROGRAMAN 1A",
-      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
-      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
       image: "assets/Photo/"
     },
     {
@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "CHAIRO JUAN SHEELO HARIYANTO",
       nickname: "Chairo",
       role: "PJ MATA KULIAH DIGITAL CITIZENSHIP",
-      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
-      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
       image: "assets/Photo/"
     },
     {
@@ -110,8 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "FARDAN RUKMAN QOLBI",
       nickname: "Fardan",
       role: "PJ MATA KULIAH MATA KULIAH FISIKA KIMIA A",
-      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
-      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
       image: "assets/Photo/"
     },
     {
@@ -119,8 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "SATRIA ARYA PRADIPTA",
       nickname: "Satria",
       role: "PJ MATA KULIAH MATA KULIAH FISIKA KIMIA B",
-      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
-      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
       image: "assets/Photo/"
     },
     {
@@ -128,19 +128,129 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "MUHAMMAD REIZYA KHUZAIMAH",
       nickname: "Reizya",
       role: "PJ MATA KULIAH MATA KULIAH ALGORITMA & PEMROGRAMAN 1C",
-      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
-      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
       image: "assets/Photo/"
     },
-     {
+    {
       id: "14",
-      name: "MUHAMMAD REIZYA KHUZAIMAH",
-      nickname: "Reizya",
+      name: "KEVIN AUFA NABIL",
+      nickname: "Kevin",
       role: "PJ MATA KULIAH MATA KULIAH ALGORITMA & PEMROGRAMAN 1C",
-      quote: "Kamera nyala, pose terbaik langsung siap tanpa perlu aba-aba.",
-      funFact: "Fun fact: Mood maker yang selalu  suasana kelas cair dan ceria.",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
       image: "assets/Photo/"
     },
+    {
+      id: "15",
+      name: "ACHMAD RAHMATULLAH",
+      nickname: "Rahmat",
+      role: "ISI ROLE DISINI",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
+      image: "assets/Photo/"
+    },
+    {
+      id: "16",
+      name: "ANDIKA NANDA MULYA",
+      nickname: "Andika",
+      role: "ISI ROLE DISINI",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
+      image: "assets/Photo/"
+    },
+    {
+      id: "17",
+      name: "MUHAMMAD AZRIEL MAHPUTRA",
+      nickname: "Azriel",
+      role: "ISI ROLE DISINI",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
+      image: "assets/Photo/"
+    }, 
+    {
+      id: "18",
+      name: "NISA ZAKIYATUNNUFUS",
+      nickname: "Nufus",
+      role: "ISI ROLE DISINI",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
+      image: "assets/Photo/"
+    },
+    {
+      id: "19",
+      name: "AULIA ERLIANA",
+      nickname: "Liana",
+      role: "ISI ROLE DISINI",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
+      image: "assets/Photo/"
+    },
+    {
+      id: "20",
+      name: "ADZRA SHIFA NABILA",
+      nickname: "Adzra",
+      role: "ISI ROLE DISINI",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
+      image: "assets/Photo/"
+    },
+    {
+      id: "21",
+      name: "AQILA NURKHOLISA",
+      nickname: "Aqila",
+      role: "ISI ROLE DISINI",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
+      image: "assets/Photo/"
+    },
+    {
+      id: "22",
+      name: "DIVA ADNIEL SAPUTRI",
+      nickname: "Diva",
+      role: "ISI ROLE DISINI",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
+      image: "assets/Photo/"
+    },
+    {
+      id: "23",
+      name: "GLADIES ZAHWA ALFIANI",
+      nickname: "Gladies",
+      role: "ISI ROLE DISINI",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
+      image: "assets/Photo/"
+    },
+    {
+      id: "24",
+      name: "JULISKA DAMAYANTI",
+      nickname: "Juliska",
+      role: "ISI ROLE DISINI",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
+      image: "assets/Photo/"
+    },
+    {
+      id: "25",
+      name: "	MARIA MARGARETTA",
+      nickname: "Maria",
+      role: "ISI ROLE DISINI",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
+      image: "assets/Photo/"
+    },
+    {
+      id: "26",
+      name: "SOFIE TATA MIRANTHY",
+      nickname: "Sofie",
+      role: "ISI ROLE DISINI",
+      quote: "ISI QUOTE DISINI",
+      funFact: "CIRI KHAS",
+      image: "assets/Photo/"
+    },
+
+
   ];
 
   /**
@@ -557,21 +667,30 @@ document.addEventListener('DOMContentLoaded', () => {
      2. RENDER FUNCTIONS (POPULATE DOM)
      ========================================================================== */
 
+  /**
+   * Helper: Validasi apakah path foto valid dan bukan sekadar folder kosong
+   */
+  function isValidPhoto(src) {
+    return Boolean(src && typeof src === 'string' && src.trim() !== '' && src !== 'assets/Photo/' && !src.endsWith('/'));
+  }
+
   // 1. Render Class Roster Grid
   const rosterContainer = document.getElementById('class-roster-container');
   if (rosterContainer) {
-    rosterContainer.innerHTML = classMembers.map((m, idx) => `
-      <div class="roster-card ${m.image ? 'has-photo' : ''}" data-roster-index="${idx}">
+    rosterContainer.innerHTML = classMembers.map((m, idx) => {
+      const hasPhoto = isValidPhoto(m.image);
+      return `
+      <div class="roster-card ${hasPhoto ? 'has-photo' : 'no-photo'}" data-roster-index="${idx}">
         <span class="roster-number">${m.id}</span>
-        <div class="roster-thumb-wrap" ${m.image ? 'style="cursor: pointer;" title="Klik untuk memperbesar foto"' : ''}>
+        <div class="roster-thumb-wrap" ${hasPhoto ? 'style="cursor: pointer;" title="Klik untuk memperbesar foto"' : ''}>
           <div class="memory-placeholder aspect-portrait" data-label="${m.nickname || m.name}">
-            ${m.image ? `
+            ${hasPhoto ? `
               <img src="${m.image}" alt="${m.name}" loading="lazy">
             ` : `
               <div class="placeholder-overlay"></div>
               <div class="placeholder-content">
-                <div class="placeholder-icon-ring" style="width: 42px; height: 42px; margin-bottom: 0.4rem;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <div class="placeholder-icon-ring" style="width: 44px; height: 44px; margin-bottom: 0.4rem;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                     <circle cx="12" cy="7" r="4"></circle>
                   </svg>
@@ -591,13 +710,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <p class="roster-quote">${m.quote}</p>
         <span class="roster-fact">${m.funFact}</span>
       </div>
-    `).join('');
+      `;
+    }).join('');
 
     // Attach click to open lightbox if member has photo
     rosterContainer.querySelectorAll('.roster-card.has-photo').forEach(card => {
       card.querySelector('.roster-thumb-wrap')?.addEventListener('click', () => {
         const m = classMembers[card.dataset.rosterIndex];
-        if (m && m.image) {
+        if (m && isValidPhoto(m.image)) {
           openLightbox({
             title: `${m.name} (${m.nickname})`,
             desc: `${m.quote} — ${m.funFact}`,
@@ -612,15 +732,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Render Timeline
   const timelineContainer = document.getElementById('timeline-container');
   if (timelineContainer) {
-    timelineContainer.innerHTML = timelineData.map((t, idx) => `
+    timelineContainer.innerHTML = timelineData.map((t, idx) => {
+      const hasPhoto = isValidPhoto(t.image);
+      return `
       <div class="timeline-node reveal-fade" data-timeline-index="${idx}">
         <span class="timeline-date">${t.date} &bull; ${t.kicker}</span>
         <h3 class="timeline-title">${t.title}</h3>
         <p class="timeline-desc">${t.desc}</p>
         
-        <div class="timeline-image-holder" ${t.image ? 'style="cursor: pointer;" title="Klik untuk melihat foto berlayar penuh"' : ''}>
+        <div class="timeline-image-holder" ${hasPhoto ? 'style="cursor: pointer;" title="Klik untuk melihat foto berlayar penuh"' : ''}>
           <div class="memory-placeholder ${t.aspect}" data-label="${t.tag}">
-            ${t.image ? `
+            ${hasPhoto ? `
               <img src="${t.image}" alt="${t.title}" loading="lazy">
             ` : `
               <div class="placeholder-overlay"></div>
@@ -660,7 +782,8 @@ document.addEventListener('DOMContentLoaded', () => {
           </span>
         </div>
       </div>
-    `).join('');
+      `;
+    }).join('');
 
     timelineContainer.querySelectorAll('.timeline-node').forEach(node => {
       const idx = node.dataset.timelineIndex;
@@ -801,6 +924,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Mobile View Switcher (Grid vs Feed) for Memory Wall
+  const viewToggleBtns = document.querySelectorAll('.view-toggle-btn');
+  function setMomentsView(viewMode) {
+    if (!momentsGrid) return;
+    if (viewMode === 'feed') {
+      momentsGrid.classList.add('feed-mode');
+    } else {
+      momentsGrid.classList.remove('feed-mode');
+    }
+    viewToggleBtns.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.view === viewMode);
+    });
+    localStorage.setItem('1ka19_moments_view', viewMode);
+  }
+
+  viewToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      setMomentsView(btn.dataset.view);
+    });
+  });
+
+  // Restore saved view preference
+  const savedMomentsView = localStorage.getItem('1ka19_moments_view');
+  if (savedMomentsView) {
+    setMomentsView(savedMomentsView);
+  }
+
   // Client-side Photo Upload Handler (+TEMPEL FOTO)
   if (photoWallUpload) {
     photoWallUpload.addEventListener('change', (e) => {
@@ -831,10 +981,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Render People Grid
   const peopleGrid = document.getElementById('people-grid');
   if (peopleGrid) {
-    peopleGrid.innerHTML = peopleData.map((p, i) => `
+    peopleGrid.innerHTML = peopleData.map((p, i) => {
+      const hasPhoto = isValidPhoto(p.image);
+      return `
       <div class="people-card reveal-fade" data-people-index="${i}">
-        <div class="memory-placeholder ${p.aspect}" data-label="PORTRAIT 0${i + 1}" ${p.image ? 'style="cursor: pointer;" title="Klik untuk melihat foto berlayar penuh"' : ''}>
-          ${p.image ? `
+        <div class="memory-placeholder ${p.aspect}" data-label="PORTRAIT 0${i + 1}" ${hasPhoto ? 'style="cursor: pointer;" title="Klik untuk melihat foto berlayar penuh"' : ''}>
+          ${hasPhoto ? `
             <img src="${p.image}" alt="${p.name}" loading="lazy">
           ` : `
             <div class="placeholder-overlay"></div>
@@ -857,7 +1009,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <h4 class="people-name">${p.name}</h4>
         <p class="people-sentence">${p.sentence}</p>
       </div>
-    `).join('');
+      `;
+    }).join('');
 
     peopleGrid.querySelectorAll('.people-card').forEach(card => {
       const idx = card.dataset.peopleIndex;
@@ -1047,7 +1200,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function runCinematicIntro() {
     if (!introEl) return;
     document.body.classList.add('intro-active');
-    introEl.classList.remove('fade-out', 'opened');
+    introEl.classList.remove('fade-out', 'opened', 'portal-dive');
 
     // Reset all steps
     [step1, step2, step3, step4].forEach(s => s && s.classList.remove('active'));
@@ -1081,16 +1234,30 @@ document.addEventListener('DOMContentLoaded', () => {
     clearTimeout(introTimeout3);
     clearTimeout(introTimeout4);
 
-    introEl.classList.add('opened');
+    // 1. Trigger the 3D Gunadarma Campus Portal Dive
+    introEl.classList.add('portal-dive');
+
+    // 2. Play soundtrack synchronized with dive
+    if (typeof musicController !== 'undefined' && !musicController.isExplicitlyDisabled()) {
+      musicController.play();
+    }
+
+    // 3. Open campus shutter curtains after the zoom surge begins
+    setTimeout(() => {
+      introEl.classList.add('opened');
+    }, 550);
+
+    // 4. Smoothly fade out intro and reveal the 1KA19 class world
     setTimeout(() => {
       introEl.classList.add('fade-out');
       document.body.classList.remove('intro-active');
-    }, 600);
+    }, 1150);
   }
 
   if (introEl) {
     introEl.addEventListener('click', (e) => {
-      if (step4 && !step4.classList.contains('active') && !e.target.closest('#btn-open-chapter')) {
+      if (e.target.closest('#btn-open-chapter')) return;
+      if (step4 && !step4.classList.contains('active')) {
         clearTimeout(introTimeout1);
         clearTimeout(introTimeout2);
         clearTimeout(introTimeout3);
@@ -1101,11 +1268,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (btnOpenChapter) {
-    btnOpenChapter.addEventListener('click', () => {
+    btnOpenChapter.addEventListener('click', (e) => {
+      e.stopPropagation();
       closeCinematicIntro();
-      if (!musicController.isExplicitlyDisabled()) {
-        musicController.play();
-      }
     });
   }
   if (btnReplay) {
@@ -1284,6 +1449,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (lightbox) {
     lightbox.querySelector('.lightbox-backdrop').addEventListener('click', closeLightbox);
+
+    // Mobile Swipe Gesture to dismiss Lightbox
+    let touchStartY = 0;
+    lightbox.addEventListener('touchstart', (e) => {
+      if (e.changedTouches && e.changedTouches[0]) {
+        touchStartY = e.changedTouches[0].screenY;
+      }
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (e) => {
+      if (e.changedTouches && e.changedTouches[0]) {
+        const touchEndY = e.changedTouches[0].screenY;
+        if (Math.abs(touchEndY - touchStartY) > 85) {
+          closeLightbox();
+        }
+      }
+    }, { passive: true });
   }
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
